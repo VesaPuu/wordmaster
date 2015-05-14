@@ -6,7 +6,7 @@
 
 13.5. 2 h
 
-- NetBeansin viritteleyä, projektin perustaminen
+- NetBeansin virittelyä, projektin perustaminen
 
 14.5. 3 h
 
