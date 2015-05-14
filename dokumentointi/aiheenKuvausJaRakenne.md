@@ -1,15 +1,15 @@
 ﻿###Aiheen kuvaus ja rakenne
 
 
-Aihe: Sanapeli. 
+**Aihe:** Sanapeli. 
 
 Pelissä pelaaja ratkaisee ohjelman antaman sanatehtävän tai tehtäviä. Tavoitteena on joko ratkaista tehtävä mahdollisimman nopeasti tai pyrkiä mahdollisimman hyvään suoritukseen ilman aikarajaa.
 
 Perusideana pelissä on etsiä suomen kielen sanoja kaksiulotteisesta ruudukosta, jonka koko on esimerkiksi 10 x 10. Wordbase-pelin tapaan sanojen perättäiset kirjaimet voivat olla missä tahansa suunnassa vierekkäisissä ruuduissa: vieressä, ylä- tai alapuolella tai kulmittain.
 
-Pelin alkaessa pelaajalle näytetään kirjaimin täytetty ruudukko, johon on sijoitettu suomen kielen sanoja sekä merkityksettömiä kirjaimia. Lähteenä käytetään Kotimaisten kielten  keskuksen sivuilta löytyvää nykysuomen sanalistaa, joka on xml-muodossa. Lista on saatavilla myös tekstitiedostona.
+Pelin alkaessa pelaajalle näytetään kirjaimin täytetty ruudukko, johon on sijoitettu suomen kielen sanoja sekä merkityksettömiä kirjaimia. Lähteenä käytetään Kotimaisten kielten  keskuksen sivuilta löytyvää nykysuomen sanalistaa.
 
-Pelivaihtoehtoja voisi olla seuraavat:
+Pelivaihtoehtoja voisivat olla seuraavat:
 
 - Ohjelma antaa listan sanoista, jotka pelaajan tulee ruudukosta löytää. Pelaaja merkitsee löytämänsä sanat ruudukkoon tai kirjoittaa ne.
 
@@ -20,14 +20,14 @@ Pelivaihtoehtoja voisi olla seuraavat:
 - Anagrammi-moodissa ohjelman antamassa listassa sanat ovat anagrammeja.
 
 
-Käyttäjät: Pelaaja (yksi kerrallaan).
+**Käyttäjät:** Pelaaja (yksi kerrallaan).
 
-Käyttäjän toiminnot:
+**Käyttäjän toiminnot:**
 
 Pelaaja voi aloittaa uuden pelin joko nimettömänä tai antamalla jonkin nimimerkin.
 
 Pelaaja voi pyytää vihjeitä.
 
-Pelaaja voi tallentaa pistemääränsä.
+Pelaaja voi pyytää näyttämään ratkaisun.
 
 Peli muistaa nimimerkin aiemmat tulokset.
