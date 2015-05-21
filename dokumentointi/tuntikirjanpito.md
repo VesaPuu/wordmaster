@@ -16,4 +16,29 @@
 
 - tekstitiedostojen lukemisen testailua
 
+17.5. 5 h
+
+- luokkien koodausta
+- aineiston muokkaamista ja karsimista
+- tekstitiedostojen lukemisen testailua
+
+18.5. 2 h
+
+- luokkien koodausta
+- alustavia testejä
+
+19.5. 2 h
+
+- luokkien koodausta
+- testien tekemistä
+
+21.5. 6,5 h
+
+- testien tekemistä
+- luokkakaavion ensimmäisen version piirtäminen
+
+
+
+
+
 
