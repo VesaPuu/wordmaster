@@ -1,4 +1,4 @@
-###Tuntikirjanpito
+﻿###Tuntikirjanpito
 
 12.5. 2 h 
 
@@ -11,5 +11,9 @@
 14.5. 3 h
 
 - Aiheen määrittely ja kuvaus
+
+16.5. 45 min
+
+- tekstitiedostojen lukemisen testailua
 
 
