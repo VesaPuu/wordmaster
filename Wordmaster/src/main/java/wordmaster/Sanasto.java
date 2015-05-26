@@ -28,7 +28,7 @@ public class Sanasto {
 
     public boolean lisaaSana(Sana sana) {
 
-        sanat.add(sana);
+        Sanasto.sanat.add(sana);
 
         return true;
     }
@@ -56,18 +56,11 @@ public class Sanasto {
         return true;
     }
 
-    boolean luoRandomSana() {
+    public Sana luoRandomSana() {
         Sana rsana;
         int r = random.nextInt(sanat.size());
         rsana = (Sana) sanat.get(r);
-        System.out.println(rsana);
-        return true;
-    }
-
-    static class sanat {
-
-        public sanat() {
-        }
+        return rsana;
     }
 
 }

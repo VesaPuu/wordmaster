@@ -37,6 +37,9 @@
 - testien tekemistä
 - luokkakaavion ensimmäisen version piirtäminen
 
+23.5. 45 min
+
+- Sanasto-luokan testien tekeminen
 
 
 

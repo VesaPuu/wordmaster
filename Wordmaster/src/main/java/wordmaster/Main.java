@@ -13,8 +13,21 @@ public class Main {
         Main.sanasto = new Sanasto();
         tl.lueTiedosto();
 //        sanasto.tulostaSanat();
-        sanasto.luoOtos(25);
-        sanasto.luoRandomSana();
+//        sanasto.luoOtos(25);
+//        System.out.println(sanasto.luoRandomSana());
+        Peli peli = new Peli();
+//        peli.lisaaMerkki(0, 0, 'W');
+//        peli.lisaaMerkki(0, 9, 'E');
+//        peli.lisaaMerkki(3, 3, 'K');
+//        peli.lisaaMerkki(12, 0, 'Y');
+//        peli.lisaaMerkki(12, 9, 'O');
+//        Sana kissa = new Sana("kissa");
+        peli.sijoitaSana(sanasto.luoRandomSana());
+
+//        System.out.println(peli.palauta(0, 0));
+//        System.out.println(peli.palauta(3, 4));
+        peli.tulosta();
+
 //        Kentta k = new Kentta();
 //        k.tulosta();
 //        Sana.teeAnagrammi(sanasto.getSana(6).getSana());
@@ -23,7 +36,6 @@ public class Main {
 //        System.out.println(uusi.getPituus());
 //        Pelaaja mikko = new Pelaaja("Mikko");
 //        System.out.println(mikko);
-
 //        sanasto.tulostaSanat();
     }
 
