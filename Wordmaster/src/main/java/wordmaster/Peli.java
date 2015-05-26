@@ -13,23 +13,44 @@ public class Peli {
 
     char[][] taulukko;
 
+    /**
+     *
+     */
     public Peli() {
 
         this.taulukko = new char[13][10];
 
     }
 
+    /**
+     *
+     * @param rivi
+     * @param sarake
+     * @param merkki
+     * @return
+     */
     public boolean lisaaMerkki(int rivi, int sarake, char merkki) {
 
         taulukko[rivi][sarake] = merkki;
         return true;
     }
 
+    /**
+     *
+     * @param rivi
+     * @param sarake
+     * @return
+     */
     public char palautaMerkki(int rivi, int sarake) {
         char merkki = taulukko[rivi][sarake];
         return merkki;
     }
 
+    /**
+     *
+     * @param sana
+     * @return
+     */
     public char[] sanastaMerkkitaulukko(Sana sana) {
 
         // tehdään sanasta merkkitaulukko
@@ -38,6 +59,10 @@ public class Peli {
 
     }
 
+    /**
+     *
+     * @param sana
+     */
     public void sijoitaSana(Sana sana) {
 
         char[] mtaulu = sanastaMerkkitaulukko(sana);
@@ -48,6 +73,9 @@ public class Peli {
         }
     }
 
+    /**
+     *
+     */
     public void tulosta() {
         for (int rivi = 0; rivi < taulukko.length; ++rivi) {
             for (int sarake = 0; sarake < taulukko[rivi].length; ++sarake) {

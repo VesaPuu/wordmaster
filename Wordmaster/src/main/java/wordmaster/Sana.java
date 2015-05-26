@@ -15,6 +15,10 @@ public class Sana {
     static int pituus;
     static int r;
 
+    /**
+     *
+     * @param sana
+     */
     public Sana(String sana) {
 
         this.sana = sana.toUpperCase();
@@ -22,14 +26,27 @@ public class Sana {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public int getPituus() {
         return this.pituus;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getSana() {
         return this.sana;
     }
 
+    /**
+     *
+     * @param input
+     * @return
+     */
     public static boolean teeAnagrammi(String input) {
 
         boolean[] used = new boolean[input.length()];
@@ -41,6 +58,15 @@ public class Sana {
 
     }
 
+    /**
+     *
+     * @param in
+     * @param outputString
+     * @param used
+     * @param inputLength
+     * @param level
+     * @return
+     */
     public static boolean permutoi(char[] in, StringBuffer outputString,
             boolean[] used, int inputLength, int level) {
         if (level == inputLength) {

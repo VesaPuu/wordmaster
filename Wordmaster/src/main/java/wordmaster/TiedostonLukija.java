@@ -8,15 +8,26 @@ package wordmaster;
 import java.io.*;
 import static wordmaster.Main.sanasto;
 
+/**
+ *
+ * @author Vesa
+ */
 public class TiedostonLukija {
 
 //    private static PrintWriter kirjoitettavaTiedosto;
+    /**
+     *
+     */
     public TiedostonLukija() {
 
         Sanasto sanasto;
 
     }
 
+    /**
+     *
+     * @return @throws Exception
+     */
     public boolean lueTiedosto() throws Exception {
 
         try {

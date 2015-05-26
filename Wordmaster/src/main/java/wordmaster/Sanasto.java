@@ -14,10 +14,25 @@ import java.util.Random;
  */
 public class Sanasto {
 
+    /**
+     *
+     */
     public static ArrayList sanat;
-    public static Random random;
+
+    /**
+     * Pelissä käytettävä aineisto tallennetaan Sana-olioina tähän listaan
+     */
+    private static Random random;
+
+    /**
+     * ArrayListin sanat osajoukko, joka koostuu satunnaisesti valituista
+     * Sana-olioista
+     */
     public static ArrayList otos;
 
+    /**
+     * Parametritön konstruktori
+     */
     public Sanasto() {
 
         Sanasto.sanat = new ArrayList<>();
@@ -26,6 +41,12 @@ public class Sanasto {
 
     }
 
+    /**
+     * Lisää parametrinä annetun Sana-olion ArrayListiin
+     *
+     * @param sana lisättävä Sana-olio
+     * @return palauttaa arvon "true", jos lisäys onnistuu
+     */
     public boolean lisaaSana(Sana sana) {
 
         Sanasto.sanat.add(sana);
@@ -33,6 +54,11 @@ public class Sanasto {
         return true;
     }
 
+    /**
+     * Tulostaa koko ArrayListin sisällön (testikäyttöä varten)
+     *
+     * @return palauttaa arvon "true", jos tulostus onnistuu
+     */
     public boolean tulostaSanat() {
         System.out.println("SANASTO: ");
         for (Object sanat1 : sanat) {
@@ -41,10 +67,23 @@ public class Sanasto {
         return true;
     }
 
+    /**
+     * Palauttaa Sana-olion indeksin perusteella
+     *
+     * @param index indeksi
+     * @return indeksiä vastaava Sana-olio
+     */
     public Sana getSana(int index) {
         return (Sana) sanat.get(index);
     }
 
+    /**
+     * Luo sanalistasta halutun kokoisen otoksen satunnaisia Sana-olioita, joka
+     * tallennetaan ArrayListiin otos
+     *
+     * @param kpl otoksen koko
+     * @return palauttaa arvon "true", jos tulostus onnistuu
+     */
     public boolean luoOtos(int kpl) {
         ArrayList kopio = sanat;
         for (int i = 0; i < kpl; i++) {
@@ -56,6 +95,11 @@ public class Sanasto {
         return true;
     }
 
+    /**
+     * Palauttaa sanalistasta yhden satunnaisen Sana-olion
+     *
+     * @return satunnainen Sana-olio
+     */
     public Sana luoRandomSana() {
         Sana rsana;
         int r = random.nextInt(sanat.size());
