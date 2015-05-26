@@ -41,7 +41,10 @@
 
 - Sanasto-luokan testien tekeminen
 
+26.5. 2,5 h
 
+- Javadocin lisääminen
+- koodin kommentointi
 
 
 
