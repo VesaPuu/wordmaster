@@ -46,5 +46,16 @@
 - Javadocin lisääminen
 - koodin kommentointi
 
+27.5. 2 h
+
+- Peli-luokan testien tekemistä
+
+28.5. 4,5 h
+
+- Peli-luokan testien tekemistä
+- Peli-luokan toiminnallisuuden koodaamista (sanan sijoittaminen taulukkoon)
+- luokkakaavion tarkentaminen
+
+
 
 
