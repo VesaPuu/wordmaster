@@ -1,6 +1,8 @@
-package wordmaster;
+package main;
 
 import java.io.FileNotFoundException;
+import wordmaster.Peli;
+import wordmaster.Sanasto;
 
 /**
  *

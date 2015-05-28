@@ -3,10 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wordmaster;
+package main;
 
 import java.io.*;
-import static wordmaster.Main.sanasto;
+import wordmaster.Sana;
+import wordmaster.Sana;
+import wordmaster.Sanasto;
+import wordmaster.Sanasto;
+import static main.Main.sanasto;
 
 /**
  *

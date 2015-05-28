@@ -5,13 +5,16 @@
  */
 package wordmaster;
 
+import java.util.Random;
+
 /**
  *
  * @author Vesa
  */
 public class Peli {
 
-    char[][] taulukko;
+    public static char[][] taulukko;
+    private static Random random;
 
     /**
      *
@@ -19,7 +22,7 @@ public class Peli {
     public Peli() {
 
         this.taulukko = new char[13][10];
-
+        this.random = new Random();
     }
 
     /**
@@ -46,31 +49,59 @@ public class Peli {
         return merkki;
     }
 
+    public boolean onkoTyhja(int rivi, int sarake) {
+        char merkki = taulukko[rivi][sarake];
+        if (merkki == 0) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      *
      * @param sana
      * @return
      */
     public char[] sanastaMerkkitaulukko(Sana sana) {
-
-        // tehdään sanasta merkkitaulukko
+        // tehdÃ¤Ã¤n sanasta merkkitaulukko
         char[] mtaulu = sana.getSana().toCharArray();
         return mtaulu;
-
     }
 
     /**
      *
      * @param sana
      */
-    public void sijoitaSana(Sana sana) {
-
+    public boolean sijoitaSana(Sana sana) {
         char[] mtaulu = sanastaMerkkitaulukko(sana);
-
+        // arvotaan aloituskohta
+        int rivi = random.nextInt(13);
+        int sarake = random.nextInt(10);
+        System.out.println(sana);//
+        //sijoitetaan mtaulun merkit taulukkoon yksi kerrallaan
         for (int i = 0; i < mtaulu.length; i++) {
 
-            taulukko[i][i] = mtaulu[i];
+            taulukko[rivi][sarake] = mtaulu[i];
+//            System.out.println(rivi + ", " + sarake);
+            while (true) {
+                int uusiRivi = muutaArvoaSatunnaisesti(rivi);
+                int uusiSarake = muutaArvoaSatunnaisesti(sarake);
+                if ((uusiRivi >= 0 && uusiRivi < 13 && uusiSarake >= 0 && uusiSarake < 10)) {
+                    if ((onkoTyhja(uusiRivi, uusiSarake))) {//
+                        rivi = uusiRivi;
+                        sarake = uusiSarake;
+                        break;
+                    }
+                }
+            }
         }
+        return true;
+    }
+
+    public int muutaArvoaSatunnaisesti(int arvo) {
+        int muutos = random.nextInt(3);//
+        int uusiArvo = arvo + muutos - 1;
+        return uusiArvo;
     }
 
     /**
@@ -81,7 +112,6 @@ public class Peli {
             for (int sarake = 0; sarake < taulukko[rivi].length; ++sarake) {
                 System.out.print(palautaMerkki(rivi, sarake));
             }
-
             System.out.print("\n");
         }
         System.out.println();
