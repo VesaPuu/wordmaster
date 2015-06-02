@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
  * @author Vesa
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({PelaajaTest.class, SanaTest.class, SanastoTest.class, PeliTest.class, wordmaster.wordmaster.WordmasterSuite.class})
+@Suite.SuiteClasses({AnagrammiTest.class, PelaajaTest.class, SanaTest.class, SanastoTest.class, PeliTest.class, wordmaster.wordmaster.WordmasterSuite.class})
 public class WordmasterSuite {
 
     @BeforeClass

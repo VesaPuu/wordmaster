@@ -1,7 +1,6 @@
 package main;
 
 import java.io.FileNotFoundException;
-import wordmaster.Peli;
 import wordmaster.Sanasto;
 
 /**
@@ -11,7 +10,9 @@ import wordmaster.Sanasto;
 public class Main {
 
     static TiedostonLukija tl;
-    static Sanasto sanasto;
+    public static Sanasto sanasto;
+    static Kayttoliittyma kl;
+    static GraafinenKayttoliittyma graafinen;
 
     /**
      *
@@ -23,16 +24,18 @@ public class Main {
 
         Main.tl = new TiedostonLukija(); // luodaan uusi Tiedostonlukija-olio
         Main.sanasto = new Sanasto(); // luodaan uusi Sanasto-olio
+//        Main.kl = new Kayttoliittyma();
         tl.lueTiedosto();
+//        kl.aloita();
+
 //        sanasto.tulostaSanat();
 //        sanasto.luoOtos(25);
 //        System.out.println(sanasto.luoRandomSana());
-        Peli peli = new Peli(); // luodaan uusi Peli-olio
-        peli.sijoitaSana(Main.sanasto.luoRandomSana()); // testataan satunnaisen sanan sijoittamista peliruudukkoon
+//        Peli peli = new Peli(); // luodaan uusi Peli-olio
+//        peli.sijoitaSana(Main.sanasto.luoRandomSana()); // testataan satunnaisen sanan sijoittamista peliruudukkoon
 //        System.out.println(peli.palauta(0, 0));
 //        System.out.println(peli.palauta(3, 4));
-        peli.tulosta(); // testataan peliruudukon tulostamista
-
+//        peli.tulosta(); // testataan peliruudukon tulostamista
 //        Sana.teeAnagrammi(sanasto.getSana(6).getSana());
 //        Sana uusi = new Sana("kissakala");
 //        System.out.println(uusi);

@@ -22,7 +22,7 @@ public class Sanasto {
     /**
      * Pelissä käytettävä aineisto tallennetaan Sana-olioina tähän listaan
      */
-    private static Random random;
+    static Random random;
 
     /**
      * ArrayListin sanat osajoukko, joka koostuu satunnaisesti valituista

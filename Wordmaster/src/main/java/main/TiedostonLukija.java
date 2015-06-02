@@ -7,10 +7,7 @@ package main;
 
 import java.io.*;
 import wordmaster.Sana;
-import wordmaster.Sana;
 import wordmaster.Sanasto;
-import wordmaster.Sanasto;
-import static main.Main.sanasto;
 
 /**
  *
@@ -18,13 +15,14 @@ import static main.Main.sanasto;
  */
 public class TiedostonLukija {
 
-//    private static PrintWriter kirjoitettavaTiedosto;
+    Sanasto sanasto;
+
     /**
      *
      */
     public TiedostonLukija() {
 
-        Sanasto sanasto;
+        this.sanasto = new Sanasto();
 
     }
 

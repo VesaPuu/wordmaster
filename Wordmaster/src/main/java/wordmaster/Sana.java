@@ -5,6 +5,8 @@
  */
 package wordmaster;
 
+import java.util.Random;
+
 /**
  *
  * @author Vesa
@@ -13,7 +15,8 @@ public class Sana {
 
     String sana;
     static int pituus;
-    static int r;
+    private static Random random;
+//    static int r;
 
     /**
      *
@@ -23,6 +26,7 @@ public class Sana {
 
         this.sana = sana.toUpperCase();
         this.pituus = sana.length();
+        this.random = new Random();
 
     }
 
@@ -43,9 +47,10 @@ public class Sana {
     }
 
     /**
+     * Metodi muodostaa kaikki anagrammit annetusta sanasta
      *
-     * @param input
-     * @return
+     * @param input merkkijono, josta anagrammit muodostetaan
+     * @return palauttaa "true", kun anagrammien muodostus onnistuu
      */
     public static boolean teeAnagrammi(String input) {
 
@@ -87,6 +92,23 @@ public class Sana {
             outputString.setLength(outputString.length() - 1);
         }
         return true;
+    }
+
+    public String randomAnagrammi(String input) {
+        char[] mtaulu = input.toCharArray();
+        String anagrammi = "";
+        int pituus = input.length();
+        for (int i = 0; i < input.length(); i++) {
+            while (true) {
+                int r = random.nextInt(pituus);
+                if (mtaulu[r] != 0) {
+                    anagrammi = anagrammi + mtaulu[r];
+                    mtaulu[r] = 0;
+                    break;
+                }
+            }
+        }
+        return anagrammi;
     }
 
     public String toString() {
