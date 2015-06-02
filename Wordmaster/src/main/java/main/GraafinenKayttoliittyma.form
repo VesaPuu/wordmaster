@@ -26,20 +26,27 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="vastaus" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="vastaaNappi" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="vihjeNappi" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lopetaNappi" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="uudelleenNappi" min="-2" max="-2" attributes="0"/>
-                  </Group>
                   <Component id="anagrammiKentta" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="otsikko" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="vihje" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="tuomioKentta" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="vastaaNappi" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="vihjeNappi" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="vastaus" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="vihjeita" min="-2" max="-2" attributes="0"/>
+                          <Component id="lopetaNappi" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="uudelleenNappi" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -54,7 +61,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="vihje" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="vastaus" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="vastaus" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="vihjeita" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="vastaaNappi" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -130,6 +140,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="uudelleenNappiActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="vihjeita">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="vihjeita"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

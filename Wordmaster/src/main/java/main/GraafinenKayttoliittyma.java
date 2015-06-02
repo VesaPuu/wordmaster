@@ -22,6 +22,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     static TiedostonLukija tl;
     Anagrammi anagrammi;
     int vihjeet;
+    int sananPituus;
     String anagrammiSana;
     Sana anagrammiksiMuutettava;
     String vihjeteksti;
@@ -33,33 +34,36 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         initComponents();
         anagrammiKentta.setText("");
         vastaaNappi.addActionListener(this);
-
         vastaus.addActionListener(this);
         vihjeNappi.addActionListener(this);
         lopetaNappi.addActionListener(this);
         uudelleenNappi.addActionListener(this);
-
         this.tl = new TiedostonLukija(); // luodaan uusi Tiedostonlukija-olio
         tl.lueTiedosto();
         this.anagrammi = new Anagrammi();
         this.vihjeet = 0;
+        this.sananPituus = 0;
         aloita();
 
     }
 
     public void aloita() {
-        vihjeet = 0;
+        vihjeet = 1;
         vastaus.setText("");
         tuomioKentta.setText("");
-
+        vastaus.setVisible(true);
         uudelleenNappi.setVisible(false);
         vihjeNappi.setVisible(true);
         vastaaNappi.setVisible(true);
+        vihjeita.setVisible(true);
         anagrammiksiMuutettava = tl.sanasto.luoRandomSana();
         String anagrammiSana = anagrammi.aloita(anagrammiksiMuutettava);
+        sananPituus = anagrammiSana.length();
         anagrammiKentta.setText(anagrammiSana);
         vihjeteksti = Character.toString(anagrammiksiMuutettava.getSana().charAt(0));
         vihje.setText("Sana alkaa " + vihjeteksti);
+        vihjeita.setText("Vihjeet " + vihjeet + ", sanan pituus " + sananPituus);
+
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -69,11 +73,11 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
 
             if (Anagrammi.ovatkoAnagrammeja(vastaus.getText(), anagrammiksiMuutettava.getSana())) {
 
-                vastaus.setText("");
                 anagrammiKentta.setText("");
                 vihje.setText("");
                 tuomioKentta.setText("Oikein!");
                 vihjeNappi.setVisible(false);
+                vastaus.setVisible(false);
                 vastaaNappi.setVisible(false);
                 uudelleenNappi.setVisible(true);
                 otsikko.setVisible(false);
@@ -86,18 +90,21 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         if (e.getSource().equals(vihjeNappi)) {
             tuomioKentta.setText("");
             vastaus.setText("");
+            vihjeet++;
 
-            if (vihjeet == anagrammiksiMuutettava.getPituus()) {
+            if (vihjeet == sananPituus) {
+                vastaus.setVisible(false);
                 vihje.setText("Sana on " + anagrammiksiMuutettava);
                 vihjeNappi.setVisible(false);
                 vastaaNappi.setVisible(false);
+                vihjeita.setVisible(false);
                 uudelleenNappi.setVisible(true);
 
             } else {
 
-                vihjeteksti = vihjeteksti + Character.toString(anagrammiksiMuutettava.getSana().charAt(vihjeet + 1));
+                vihjeteksti = vihjeteksti + Character.toString(anagrammiksiMuutettava.getSana().charAt(vihjeet - 1));
                 vihje.setText("Sana alkaa " + vihjeteksti);
-                vihjeet++;
+                vihjeita.setText("Vihjeet " + vihjeet + ", sanan pituus " + sananPituus);
                 repaint();
             }
         }
@@ -113,6 +120,9 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             lopetaNappi.setVisible(false);
             anagrammiKentta.setVisible(false);
             vastaus.setVisible(false);
+            vihjeita.setVisible(false);
+            otsikko.setVisible(false);
+            vihje.setVisible(false);
             tuomioKentta.setText("Kiitos ja näkemiin!");
             repaint();
             ;
@@ -138,6 +148,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         vihje = new javax.swing.JLabel();
         tuomioKentta = new javax.swing.JLabel();
         uudelleenNappi = new javax.swing.JButton();
+        vihjeita = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -169,6 +180,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             }
         });
 
+        vihjeita.setText("vihjeita");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -176,19 +189,23 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(vastaus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(vastaaNappi)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(vihjeNappi)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lopetaNappi)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(uudelleenNappi))
                     .addComponent(anagrammiKentta)
                     .addComponent(otsikko)
                     .addComponent(vihje)
-                    .addComponent(tuomioKentta))
+                    .addComponent(tuomioKentta)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(vastaaNappi)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(vihjeNappi))
+                            .addComponent(vastaus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(vihjeita)
+                            .addComponent(lopetaNappi))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(uudelleenNappi)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -200,7 +217,9 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(vihje)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(vastaus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(vastaus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(vihjeita))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vastaaNappi)
@@ -268,6 +287,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     private javax.swing.JFormattedTextField vastaus;
     private javax.swing.JLabel vihje;
     private javax.swing.JButton vihjeNappi;
+    private javax.swing.JLabel vihjeita;
     // End of variables declaration//GEN-END:variables
 
 }
