@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package wordmaster;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- *
- * @author Vesa
- */
 public class Sanasto {
 
     /**
@@ -106,5 +97,4 @@ public class Sanasto {
         rsana = (Sana) sanat.get(r);
         return rsana;
     }
-
 }

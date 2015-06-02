@@ -1,22 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package wordmaster;
 
 import java.util.Random;
 
-/**
- *
- * @author Vesa
- */
 public class Sana {
 
     String sana;
     static int pituus;
     private static Random random;
-//    static int r;
 
     /**
      *

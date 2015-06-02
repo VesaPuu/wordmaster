@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main;
 
 import java.awt.event.ActionEvent;
@@ -13,10 +8,6 @@ import java.util.logging.Logger;
 import wordmaster.Anagrammi;
 import wordmaster.Sana;
 
-/**
- *
- * @author Vesa
- */
 public class GraafinenKayttoliittyma extends javax.swing.JFrame implements ActionListener {
 
     static TiedostonLukija tl;
