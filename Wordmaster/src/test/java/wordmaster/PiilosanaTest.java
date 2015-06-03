@@ -15,29 +15,29 @@ import org.junit.Test;
  *
  * @author Vesa
  */
-public class PeliTest {
+public class PiilosanaTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        Peli p = new Peli();
+        Piilosana p = new Piilosana();
     }
 
     @Test
     public void testLisaaMerkki() {
-        Peli p = new Peli();
+        Piilosana p = new Piilosana();
         assertEquals(true, p.lisaaMerkki(0, 0, 'a'));
     }
 
     @Test
     public void testPalautaMerkki() {
-        Peli p = new Peli();
+        Piilosana p = new Piilosana();
         p.lisaaMerkki(0, 0, 'a');
         assertEquals('a', p.palautaMerkki(0, 0));
     }
 
     @Test
     public void testSanastaMerkkitaulukko() {
-        Peli p = new Peli();
+        Piilosana p = new Piilosana();
         Sana kissa = new Sana("kissa");
         char[] katti = {'K', 'I', 'S', 'S', 'A'};
         Assert.assertArrayEquals(katti, p.sanastaMerkkitaulukko(kissa));
@@ -45,27 +45,27 @@ public class PeliTest {
 
     @Test
     public void testMuutaArvoaSatunnaisesti() {
-        Peli p = new Peli();
+        Piilosana p = new Piilosana();
         int i = p.muutaArvoaSatunnaisesti(0);
         assertTrue(i == -1 || i == 0 || i == 1);
     }
 
     @Test
     public void testOnkoTyhja() {
-        Peli p = new Peli();
+        Piilosana p = new Piilosana();
         assertEquals(true, p.onkoTyhja(0, 0));
     }
 
     @Test
     public void testOnkoTyhjaEpaonnistuu() {
-        Peli p = new Peli();
+        Piilosana p = new Piilosana();
         p.lisaaMerkki(0, 0, 'a');
         assertEquals(false, p.onkoTyhja(0, 0));
     }
 
     @Test
     public void testSijoitaSana() {
-        Peli p = new Peli();
+        Piilosana p = new Piilosana();
         Sana kissa = new Sana("kissa");
         assertEquals(true, p.sijoitaSana(kissa));
     }

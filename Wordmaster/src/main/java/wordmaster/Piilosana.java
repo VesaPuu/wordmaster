@@ -2,7 +2,7 @@ package wordmaster;
 
 import java.util.Random;
 
-public class Peli {
+public class Piilosana {
 
     public static char[][] taulukko;
     private static Random random;
@@ -10,7 +10,7 @@ public class Peli {
     /**
      *
      */
-    public Peli() {
+    public Piilosana() {
 
         this.taulukko = new char[13][10];
         this.random = new Random();

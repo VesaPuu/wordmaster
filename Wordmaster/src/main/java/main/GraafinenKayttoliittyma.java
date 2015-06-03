@@ -26,6 +26,9 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         anagrammiKentta.setText("");
         vastaaNappi.addActionListener(this);
         vastaus.addActionListener(this);
+        anagrammiNappi.addActionListener(this);
+        piilosanaNappi.addActionListener(this);
+        laivanupotusNappi.addActionListener(this);
         vihjeNappi.addActionListener(this);
         lopetaNappi.addActionListener(this);
         uudelleenNappi.addActionListener(this);
@@ -34,11 +37,12 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         this.anagrammi = new Anagrammi();
         this.vihjeet = 0;
         this.sananPituus = 0;
-        aloita();
-
+        anagrammiPaneeli.setVisible(false);
+        piilosanaPaneeli.setVisible(false);
+        laivanupotusPaneeli.setVisible(false);
     }
 
-    public void aloita() {
+    public void aloitaAnagrammi() {
         vihjeet = 1;
         vastaus.setText("");
         tuomioKentta.setText("");
@@ -57,7 +61,34 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
 
     }
 
+    public void aloitaPiilosana() {
+    }
+
+    public void aloitaLaivanupotus() {
+    }
+
     public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource().equals(anagrammiNappi)) {
+            anagrammiPaneeli.setVisible(true);
+            piilosanaPaneeli.setVisible(false);
+            laivanupotusPaneeli.setVisible(false);
+            aloitaAnagrammi();
+        }
+
+        if (e.getSource().equals(piilosanaNappi)) {
+            anagrammiPaneeli.setVisible(false);
+            piilosanaPaneeli.setVisible(true);
+            laivanupotusPaneeli.setVisible(false);
+            aloitaPiilosana();
+        }
+
+        if (e.getSource().equals(laivanupotusNappi)) {
+            anagrammiPaneeli.setVisible(false);
+            piilosanaPaneeli.setVisible(false);
+            laivanupotusPaneeli.setVisible(true);
+            aloitaLaivanupotus();
+        }
 
         if (e.getSource().equals(vastaaNappi)) {
             tuomioKentta.setText("");
@@ -101,20 +132,18 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         }
 
         if (e.getSource().equals(uudelleenNappi)) {
-            aloita();
+            aloitaAnagrammi();
         }
 
         if (e.getSource().equals(lopetaNappi)) {
-            vihjeNappi.setVisible(false);
-            vastaaNappi.setVisible(false);
-            uudelleenNappi.setVisible(false);
-            lopetaNappi.setVisible(false);
-            anagrammiKentta.setVisible(false);
-            vastaus.setVisible(false);
-            vihjeita.setVisible(false);
-            otsikko.setVisible(false);
-            vihje.setVisible(false);
-            tuomioKentta.setText("Kiitos ja näkemiin!");
+            anagrammiPaneeli.setVisible(false);
+            piilosanaPaneeli.setVisible(false);
+            laivanupotusPaneeli.setVisible(false);
+            lopetaPaneeli.setVisible(false);
+            anagrammiNappi.setVisible(false);
+            piilosanaNappi.setVisible(false);
+            laivanupotusNappi.setVisible(false);
+            valitse.setText("Kiitos ja näkemiin!");
             repaint();
             ;
         }
@@ -130,30 +159,32 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        anagrammiPaneeli = new javax.swing.JPanel();
         otsikko = new javax.swing.JLabel();
-        vastaaNappi = new javax.swing.JButton();
-        vastaus = new javax.swing.JFormattedTextField();
-        vihjeNappi = new javax.swing.JButton();
-        lopetaNappi = new javax.swing.JButton();
         anagrammiKentta = new javax.swing.JLabel();
         vihje = new javax.swing.JLabel();
-        tuomioKentta = new javax.swing.JLabel();
-        uudelleenNappi = new javax.swing.JButton();
+        vastaus = new javax.swing.JFormattedTextField();
+        vastaaNappi = new javax.swing.JButton();
+        vihjeNappi = new javax.swing.JButton();
         vihjeita = new javax.swing.JLabel();
+        uudelleenNappi = new javax.swing.JButton();
+        tuomioKentta = new javax.swing.JLabel();
+        ylaPaneeli = new javax.swing.JPanel();
+        valitse = new javax.swing.JLabel();
+        anagrammiNappi = new javax.swing.JButton();
+        piilosanaNappi = new javax.swing.JButton();
+        laivanupotusNappi = new javax.swing.JButton();
+        piilosanaPaneeli = new javax.swing.JPanel();
+        laivanupotusPaneeli = new javax.swing.JPanel();
+        lopetaPaneeli = new javax.swing.JPanel();
+        lopetaNappi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        anagrammiPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 1, true));
+
         otsikko.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         otsikko.setText("Minkä sanan anagrammi on...");
-
-        vastaaNappi.setText("Vastaa");
-
-        vastaus.setColumns(10);
-        vastaus.setText("Vastaus");
-
-        vihjeNappi.setText("Seuraava kirjain");
-
-        lopetaNappi.setText("Lopeta");
 
         anagrammiKentta.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         anagrammiKentta.setText("anagrammi");
@@ -161,8 +192,14 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         vihje.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         vihje.setText("vihje");
 
-        tuomioKentta.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        tuomioKentta.setText("tuomio");
+        vastaus.setColumns(10);
+        vastaus.setText("Vastaus");
+
+        vastaaNappi.setText("Vastaa");
+
+        vihjeNappi.setText("Seuraava kirjain");
+
+        vihjeita.setText("vihjeita");
 
         uudelleenNappi.setText("Uudelleen");
         uudelleenNappi.addActionListener(new java.awt.event.ActionListener() {
@@ -171,55 +208,175 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             }
         });
 
-        vihjeita.setText("vihjeita");
+        tuomioKentta.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tuomioKentta.setText("tuomio");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout anagrammiPaneeliLayout = new javax.swing.GroupLayout(anagrammiPaneeli);
+        anagrammiPaneeli.setLayout(anagrammiPaneeliLayout);
+        anagrammiPaneeliLayout.setHorizontalGroup(
+            anagrammiPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(anagrammiPaneeliLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(anagrammiPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(anagrammiKentta)
                     .addComponent(otsikko)
                     .addComponent(vihje)
-                    .addComponent(tuomioKentta)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                    .addGroup(anagrammiPaneeliLayout.createSequentialGroup()
+                        .addGroup(anagrammiPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(anagrammiPaneeliLayout.createSequentialGroup()
                                 .addComponent(vastaaNappi)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(vihjeNappi))
                             .addComponent(vastaus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(vihjeita)
-                            .addComponent(lopetaNappi))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(uudelleenNappi)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(vihjeita)
+                        .addGap(37, 37, 37)
+                        .addComponent(uudelleenNappi))
+                    .addGroup(anagrammiPaneeliLayout.createSequentialGroup()
+                        .addComponent(tuomioKentta)
+                        .addGap(307, 307, 307)))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        anagrammiPaneeliLayout.setVerticalGroup(
+            anagrammiPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(anagrammiPaneeliLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(otsikko)
                 .addGap(7, 7, 7)
                 .addComponent(anagrammiKentta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(vihje)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(anagrammiPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vastaus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(vihjeita))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(anagrammiPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vastaaNappi)
                     .addComponent(vihjeNappi)
-                    .addComponent(lopetaNappi)
                     .addComponent(uudelleenNappi))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tuomioKentta)
-                .addGap(0, 127, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
+        ylaPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 255), 1, true));
+
+        valitse.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        valitse.setText("Valitse peli");
+
+        anagrammiNappi.setText("Anagrammi");
+
+        piilosanaNappi.setText("Piilosana");
+        piilosanaNappi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                piilosanaNappiActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi.setText("Laivanupotus");
+
+        javax.swing.GroupLayout ylaPaneeliLayout = new javax.swing.GroupLayout(ylaPaneeli);
+        ylaPaneeli.setLayout(ylaPaneeliLayout);
+        ylaPaneeliLayout.setHorizontalGroup(
+            ylaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ylaPaneeliLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ylaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(valitse)
+                    .addGroup(ylaPaneeliLayout.createSequentialGroup()
+                        .addComponent(anagrammiNappi)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(piilosanaNappi)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(laivanupotusNappi)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        ylaPaneeliLayout.setVerticalGroup(
+            ylaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ylaPaneeliLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(valitse)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ylaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(anagrammiNappi)
+                    .addComponent(piilosanaNappi)
+                    .addComponent(laivanupotusNappi))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+
+        piilosanaPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 0), 1, true));
+
+        javax.swing.GroupLayout piilosanaPaneeliLayout = new javax.swing.GroupLayout(piilosanaPaneeli);
+        piilosanaPaneeli.setLayout(piilosanaPaneeliLayout);
+        piilosanaPaneeliLayout.setHorizontalGroup(
+            piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        piilosanaPaneeliLayout.setVerticalGroup(
+            piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        laivanupotusPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 51), 1, true));
+
+        javax.swing.GroupLayout laivanupotusPaneeliLayout = new javax.swing.GroupLayout(laivanupotusPaneeli);
+        laivanupotusPaneeli.setLayout(laivanupotusPaneeliLayout);
+        laivanupotusPaneeliLayout.setHorizontalGroup(
+            laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        laivanupotusPaneeliLayout.setVerticalGroup(
+            laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        lopetaPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 0, 0), 1, true));
+
+        lopetaNappi.setText("Lopeta");
+
+        javax.swing.GroupLayout lopetaPaneeliLayout = new javax.swing.GroupLayout(lopetaPaneeli);
+        lopetaPaneeli.setLayout(lopetaPaneeliLayout);
+        lopetaPaneeliLayout.setHorizontalGroup(
+            lopetaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lopetaPaneeliLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(lopetaNappi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(70, 70, 70))
+        );
+        lopetaPaneeliLayout.setVerticalGroup(
+            lopetaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lopetaPaneeliLayout.createSequentialGroup()
+                .addGap(0, 13, Short.MAX_VALUE)
+                .addComponent(lopetaNappi))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(anagrammiPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ylaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(piilosanaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(laivanupotusPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lopetaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 248, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(ylaPaneeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(anagrammiPaneeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(piilosanaPaneeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(laivanupotusPaneeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lopetaPaneeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -228,6 +385,10 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     private void uudelleenNappiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uudelleenNappiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_uudelleenNappiActionPerformed
+
+    private void piilosanaNappiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piilosanaNappiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_piilosanaNappiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -270,15 +431,24 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel anagrammiKentta;
+    private javax.swing.JButton anagrammiNappi;
+    private javax.swing.JPanel anagrammiPaneeli;
+    private javax.swing.JButton laivanupotusNappi;
+    private javax.swing.JPanel laivanupotusPaneeli;
     private javax.swing.JButton lopetaNappi;
+    private javax.swing.JPanel lopetaPaneeli;
     private javax.swing.JLabel otsikko;
+    private javax.swing.JButton piilosanaNappi;
+    private javax.swing.JPanel piilosanaPaneeli;
     private javax.swing.JLabel tuomioKentta;
     private javax.swing.JButton uudelleenNappi;
+    private javax.swing.JLabel valitse;
     private javax.swing.JButton vastaaNappi;
     private javax.swing.JFormattedTextField vastaus;
     private javax.swing.JLabel vihje;
     private javax.swing.JButton vihjeNappi;
     private javax.swing.JLabel vihjeita;
+    private javax.swing.JPanel ylaPaneeli;
     // End of variables declaration//GEN-END:variables
 
 }
