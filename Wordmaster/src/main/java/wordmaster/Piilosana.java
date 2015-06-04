@@ -12,7 +12,7 @@ public class Piilosana {
      */
     public Piilosana() {
 
-        this.taulukko = new char[13][10];
+        this.taulukko = new char[10][10];
         this.random = new Random();
     }
 
@@ -35,12 +35,13 @@ public class Piilosana {
      * @param sarake
      * @return
      */
-    public char palautaMerkki(int rivi, int sarake) {
+    public static String palautaMerkki(int rivi, int sarake) {
         char merkki = taulukko[rivi][sarake];
-        return merkki;
+        String kirjain = "" + merkki;
+        return kirjain;
     }
 
-    public boolean onkoTyhja(int rivi, int sarake) {
+    public static boolean onkoTyhja(int rivi, int sarake) {
         char merkki = taulukko[rivi][sarake];
         if (merkki == 0) {
             return true;
@@ -53,7 +54,7 @@ public class Piilosana {
      * @param sana
      * @return
      */
-    public char[] sanastaMerkkitaulukko(Sana sana) {
+    public static char[] sanastaMerkkitaulukko(Sana sana) {
         // tehdÃ¤Ã¤n sanasta merkkitaulukko
         char[] mtaulu = sana.getSana().toCharArray();
         return mtaulu;
@@ -63,10 +64,10 @@ public class Piilosana {
      *
      * @param sana
      */
-    public boolean sijoitaSana(Sana sana) {
+    public static boolean sijoitaSana(Sana sana) {
         char[] mtaulu = sanastaMerkkitaulukko(sana);
         // arvotaan aloituskohta
-        int rivi = random.nextInt(13);
+        int rivi = random.nextInt(10);
         int sarake = random.nextInt(10);
         System.out.println(sana);//
         //sijoitetaan mtaulun merkit taulukkoon yksi kerrallaan
@@ -77,7 +78,7 @@ public class Piilosana {
             while (true) {
                 int uusiRivi = muutaArvoaSatunnaisesti(rivi);
                 int uusiSarake = muutaArvoaSatunnaisesti(sarake);
-                if ((uusiRivi >= 0 && uusiRivi < 13 && uusiSarake >= 0 && uusiSarake < 10)) {
+                if ((uusiRivi >= 0 && uusiRivi < 10 && uusiSarake >= 0 && uusiSarake < 10)) {
                     if ((onkoTyhja(uusiRivi, uusiSarake))) {//
                         rivi = uusiRivi;
                         sarake = uusiSarake;
@@ -89,7 +90,7 @@ public class Piilosana {
         return true;
     }
 
-    public int muutaArvoaSatunnaisesti(int arvo) {
+    public static int muutaArvoaSatunnaisesti(int arvo) {
         int muutos = random.nextInt(3);//
         int uusiArvo = arvo + muutos - 1;
         return uusiArvo;

@@ -32,7 +32,7 @@ public class PiilosanaTest {
     public void testPalautaMerkki() {
         Piilosana p = new Piilosana();
         p.lisaaMerkki(0, 0, 'a');
-        assertEquals('a', p.palautaMerkki(0, 0));
+        assertEquals("" + 'a', p.palautaMerkki(0, 0));
     }
 
     @Test
