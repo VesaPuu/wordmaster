@@ -57,5 +57,27 @@
 - luokkakaavion tarkentaminen
 
 
+30.5. 0,5 h
+
+- Anagrammipelin koodausta
+
+31.5. 3 h
+
+- anagrammipelin koodausta
+- graafisen käyttöliittymän rakentamista
+ 
+1.6. 2,5 h
+
+- anagrammipelin koodausta
+- graafisen käyttöliittymän rakentamista
+
+3.6. 1 h
+
+- graafisen käyttöliittymän rakentamista
+
+4.6. 8,5 h
+
+- Käyttöliittymän rakentamista, Piilosana-pelin koodaamista
+- luokkakaavio päivitetty
 
 
