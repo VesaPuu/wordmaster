@@ -2,6 +2,14 @@ package wordmaster;
 
 import java.util.Random;
 
+/**
+ * Piilosana-luokkaa tarvitaan Piilosana-pelin taulukon luomiseen. Luokan
+ * välineillä taulukkoon voidaan sijoittaa sanoja satunnaisesti merkki
+ * kerrallaan ja palauttaa tieto siitä, mikä merkki on missäkin taulukon
+ * solussa.
+ *
+ * @author Vesa
+ */
 public class Piilosana {
 
     public static char[][] taulukko;
@@ -63,6 +71,7 @@ public class Piilosana {
     /**
      *
      * @param sana
+     * @return
      */
     public static boolean sijoitaSana(Sana sana) {
         char[] mtaulu = sanastaMerkkitaulukko(sana);

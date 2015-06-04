@@ -1,5 +1,11 @@
 package wordmaster;
 
+/**
+ * Pelaaja-luokan ilmentymät sisältävät tiedon pelaajan nimestä ja hänen
+ * pisteistään. Luokan välineillä pelaajalle voidaan asettaa haluttu pistemäärä.
+ *
+ * @author Vesa
+ */
 public class Pelaaja {
 
     String nimi;

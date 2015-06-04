@@ -3,6 +3,12 @@ package wordmaster;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Sanasto-luokan ilmentymän sisältämään ArrayListiin tallennetaan Sana-olioita.
+ * Sanastosta voidaan palauttaa yksi satunnainen sana tai useamman sanan otos.
+ *
+ * @author Vesa
+ */
 public class Sanasto {
 
     /**

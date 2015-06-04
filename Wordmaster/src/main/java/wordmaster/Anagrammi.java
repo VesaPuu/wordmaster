@@ -1,19 +1,23 @@
 package wordmaster;
 
+/**
+ * Luokka Anagrammi sisältää kaksi metodia, joista toinen palauttaa sanasta
+ * tehdyn anagrammin ja toinen testaa, ovatko kaksi sanaa toistensa anagrammeja.
+ *
+ * @author Vesa
+ */
 public class Anagrammi {
 
     Sanasto sanasto;
 
+    /**
+     *
+     */
     public Anagrammi() {
 
     }
 
     public String aloita(Sana muutettava) {
-//        Sana anagrammiksiMuutettava = Main.sanasto.luoRandomSana();
-        // tekee sanan kaikki anagrammit
-//        anagrammiksiMuutettava.teeAnagrammi(anagrammiksiMuutettava.getSana());
-        // tekee satunnaisen anagrammin
-//        System.out.println(muutettava);
         return muutettava.randomAnagrammi(muutettava.getSana());
 
     }

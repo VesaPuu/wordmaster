@@ -2,6 +2,13 @@ package wordmaster;
 
 import java.util.Random;
 
+/**
+ * Sana-luokan ilmentymät sisältävät jonkin sanan ja tiedon sen pituudesta.
+ * Luokan välineillä voidaan tehdä sanasta kaikki mahdolliset anagrammit tai
+ * yksi satunnainen anagrammi.
+ *
+ * @author Vesa
+ */
 public class Sana {
 
     String sana;
