@@ -255,7 +255,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         nappi0107.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0108.setText(piilosana.palautaMerkki(i, j));
-        nappi0109.setBackground(Color.LIGHT_GRAY);
+        nappi0108.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0109.setText(piilosana.palautaMerkki(i, j));
         nappi0109.setBackground(Color.LIGHT_GRAY);
