@@ -68,6 +68,37 @@ public class Piilosana {
         return mtaulu;
     }
 
+    public static void tyhjennaKaikki() {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+
+                taulukko[i][j] = 0;
+
+            }
+        }
+    }
+
+    public static void taytaKaikki() {
+        for (int i = 0; i < 10; i++) {
+
+            for (int j = 0; j < 10; j++) {
+                if (onkoTyhja(i, j)) {
+
+                    taulukko[i][j] = satunnainenMerkki();
+                }
+            }
+
+        }
+    }
+
+    private static char satunnainenMerkki() {
+        final String aakkoset = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
+        Random r = new Random();
+        final int pituus = aakkoset.length();
+        return aakkoset.charAt(r.nextInt(pituus));
+
+    }
+
     /**
      *
      * @param sana

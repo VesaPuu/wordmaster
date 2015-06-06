@@ -23,6 +23,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     Sana anagrammiksiMuutettava;
     String vihjeteksti;
     String piilosanaVastaus;
+    String etsittavaSana;
+//    String sijoitettava;
 
     /**
      * Creates new form GraafinenKayttoliittyma
@@ -140,6 +142,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         nappi1009.addActionListener(this);
         nappi1010.addActionListener(this);
         okNappi.addActionListener(this);
+        piilosanaVastaaNappi.addActionListener(this);
         this.tl = new TiedostonLukija(); // luodaan uusi Tiedostonlukija-olio
         tl.lueTiedosto();
         this.anagrammi = new Anagrammi();
@@ -190,11 +193,14 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     }
 
     public void aloitaPiilosana() {
+        piilosana.tyhjennaKaikki();
         piilosanaVastaus = "";
-//        piilosana.taytaKaikki();
+        etsittavaSana = "";
+        piilosanaVastausKentta.setText("Vastaus: ");
         Sana sijoitettava = tl.sanasto.luoRandomSana();
         piilosana.sijoitaSana(sijoitettava);
-        String etsittavaSana = sijoitettava.getSana();
+        piilosana.taytaKaikki();
+        etsittavaSana = sijoitettava.getSana();
         etsittava.setText(etsittavaSana);
 
 //        String r1 = tl.sanasto.luoRandomSana().getSana();
@@ -228,214 +234,313 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         int j = 0;
 
         nappi0101.setText(piilosana.palautaMerkki(i, j));
+        nappi0101.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0102.setText(piilosana.palautaMerkki(i, j));
+        nappi0102.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0103.setText(piilosana.palautaMerkki(i, j));
+        nappi0103.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0104.setText(piilosana.palautaMerkki(i, j));
+        nappi0104.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0105.setText(piilosana.palautaMerkki(i, j));
+        nappi0105.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0106.setText(piilosana.palautaMerkki(i, j));
+        nappi0106.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0107.setText(piilosana.palautaMerkki(i, j));
+        nappi0107.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0108.setText(piilosana.palautaMerkki(i, j));
+        nappi0109.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0109.setText(piilosana.palautaMerkki(i, j));
+        nappi0109.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0110.setText(piilosana.palautaMerkki(i, j));
+        nappi0110.setBackground(Color.LIGHT_GRAY);
         i++;
         j = 0;
         nappi0201.setText(piilosana.palautaMerkki(i, j));
+        nappi0201.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0202.setText(piilosana.palautaMerkki(i, j));
+        nappi0202.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0203.setText(piilosana.palautaMerkki(i, j));
+        nappi0203.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0204.setText(piilosana.palautaMerkki(i, j));
+        nappi0204.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0205.setText(piilosana.palautaMerkki(i, j));
+        nappi0205.setBackground(Color.LIGHT_GRAY);
         j++;;
         nappi0206.setText(piilosana.palautaMerkki(i, j));
+        nappi0206.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0207.setText(piilosana.palautaMerkki(i, j));
+        nappi0207.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0208.setText(piilosana.palautaMerkki(i, j));
+        nappi0208.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0209.setText(piilosana.palautaMerkki(i, j));
+        nappi0209.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0210.setText(piilosana.palautaMerkki(i, j));
+        nappi0210.setBackground(Color.LIGHT_GRAY);
         i++;
         j = 0;
         nappi0301.setText(piilosana.palautaMerkki(i, j));
+        nappi0301.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0302.setText(piilosana.palautaMerkki(i, j));
+        nappi0302.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0303.setText(piilosana.palautaMerkki(i, j));
+        nappi0303.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0304.setText(piilosana.palautaMerkki(i, j));
+        nappi0304.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0305.setText(piilosana.palautaMerkki(i, j));
+        nappi0305.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0306.setText(piilosana.palautaMerkki(i, j));
+        nappi0306.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0307.setText(piilosana.palautaMerkki(i, j));
+        nappi0307.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0308.setText(piilosana.palautaMerkki(i, j));
+        nappi0308.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0309.setText(piilosana.palautaMerkki(i, j));
+        nappi0309.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0310.setText(piilosana.palautaMerkki(i, j));
+        nappi0310.setBackground(Color.LIGHT_GRAY);
         i++;
         j = 0;
         nappi0401.setText(piilosana.palautaMerkki(i, j));
+        nappi0401.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0402.setText(piilosana.palautaMerkki(i, j));
+        nappi0402.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0403.setText(piilosana.palautaMerkki(i, j));
+        nappi0403.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0404.setText(piilosana.palautaMerkki(i, j));
+        nappi0404.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0405.setText(piilosana.palautaMerkki(i, j));
+        nappi0405.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0406.setText(piilosana.palautaMerkki(i, j));
+        nappi0406.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0407.setText(piilosana.palautaMerkki(i, j));
+        nappi0407.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0408.setText(piilosana.palautaMerkki(i, j));
+        nappi0408.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0409.setText(piilosana.palautaMerkki(i, j));
+        nappi0409.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0410.setText(piilosana.palautaMerkki(i, j));
+        nappi0410.setBackground(Color.LIGHT_GRAY);
         i++;
         j = 0;
         nappi0501.setText(piilosana.palautaMerkki(i, j));
+        nappi0501.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0502.setText(piilosana.palautaMerkki(i, j));
+        nappi0502.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0503.setText(piilosana.palautaMerkki(i, j));
+        nappi0503.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0504.setText(piilosana.palautaMerkki(i, j));
+        nappi0504.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0505.setText(piilosana.palautaMerkki(i, j));
+        nappi0505.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0506.setText(piilosana.palautaMerkki(i, j));
+        nappi0506.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0507.setText(piilosana.palautaMerkki(i, j));
+        nappi0507.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0508.setText(piilosana.palautaMerkki(i, j));
+        nappi0508.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0509.setText(piilosana.palautaMerkki(i, j));
+        nappi0509.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0510.setText(piilosana.palautaMerkki(i, j));
+        nappi0510.setBackground(Color.LIGHT_GRAY);
         i++;
         j = 0;
         nappi0601.setText(piilosana.palautaMerkki(i, j));
+        nappi0601.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0602.setText(piilosana.palautaMerkki(i, j));
+        nappi0602.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0603.setText(piilosana.palautaMerkki(i, j));
+        nappi0603.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0604.setText(piilosana.palautaMerkki(i, j));
+        nappi0604.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0605.setText(piilosana.palautaMerkki(i, j));
+        nappi0605.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0606.setText(piilosana.palautaMerkki(i, j));
+        nappi0606.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0607.setText(piilosana.palautaMerkki(i, j));
+        nappi0607.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0608.setText(piilosana.palautaMerkki(i, j));
+        nappi0608.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0609.setText(piilosana.palautaMerkki(i, j));
+        nappi0609.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0610.setText(piilosana.palautaMerkki(i, j));
+        nappi0610.setBackground(Color.LIGHT_GRAY);
         i++;
         j = 0;
         nappi0701.setText(piilosana.palautaMerkki(i, j));
+        nappi0701.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0702.setText(piilosana.palautaMerkki(i, j));
+        nappi0702.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0703.setText(piilosana.palautaMerkki(i, j));
+        nappi0703.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0704.setText(piilosana.palautaMerkki(i, j));
+        nappi0704.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0705.setText(piilosana.palautaMerkki(i, j));
+        nappi0705.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0706.setText(piilosana.palautaMerkki(i, j));
+        nappi0706.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0707.setText(piilosana.palautaMerkki(i, j));
+        nappi0707.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0708.setText(piilosana.palautaMerkki(i, j));
+        nappi0708.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0709.setText(piilosana.palautaMerkki(i, j));
+        nappi0709.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0710.setText(piilosana.palautaMerkki(i, j));
+        nappi0710.setBackground(Color.LIGHT_GRAY);
         i++;
         j = 0;
         nappi0801.setText(piilosana.palautaMerkki(i, j));
+        nappi0801.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0802.setText(piilosana.palautaMerkki(i, j));
+        nappi0802.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0803.setText(piilosana.palautaMerkki(i, j));
+        nappi0803.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0804.setText(piilosana.palautaMerkki(i, j));
+        nappi0804.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0805.setText(piilosana.palautaMerkki(i, j));
+        nappi0805.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0806.setText(piilosana.palautaMerkki(i, j));
+        nappi0806.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0807.setText(piilosana.palautaMerkki(i, j));
+        nappi0807.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0808.setText(piilosana.palautaMerkki(i, j));
+        nappi0808.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0809.setText(piilosana.palautaMerkki(i, j));
+        nappi0809.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0810.setText(piilosana.palautaMerkki(i, j));
+        nappi0810.setBackground(Color.LIGHT_GRAY);
         i++;
         j = 0;
         nappi0901.setText(piilosana.palautaMerkki(i, j));
+        nappi0901.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0902.setText(piilosana.palautaMerkki(i, j));
+        nappi0902.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0903.setText(piilosana.palautaMerkki(i, j));
+        nappi0903.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0904.setText(piilosana.palautaMerkki(i, j));
+        nappi0904.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0905.setText(piilosana.palautaMerkki(i, j));
+        nappi0905.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0906.setText(piilosana.palautaMerkki(i, j));
+        nappi0906.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0907.setText(piilosana.palautaMerkki(i, j));
+        nappi0907.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0908.setText(piilosana.palautaMerkki(i, j));
+        nappi0908.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0909.setText(piilosana.palautaMerkki(i, j));
+        nappi0909.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi0910.setText(piilosana.palautaMerkki(i, j));
+        nappi0910.setBackground(Color.LIGHT_GRAY);
         i++;
         j = 0;
         nappi1001.setText(piilosana.palautaMerkki(i, j));
+        nappi1001.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi1002.setText(piilosana.palautaMerkki(i, j));
+        nappi1002.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi1003.setText(piilosana.palautaMerkki(i, j));
+        nappi1003.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi1004.setText(piilosana.palautaMerkki(i, j));
+        nappi1004.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi1005.setText(piilosana.palautaMerkki(i, j));
+        nappi1005.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi1006.setText(piilosana.palautaMerkki(i, j));
+        nappi1006.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi1007.setText(piilosana.palautaMerkki(i, j));
+        nappi1007.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi1008.setText(piilosana.palautaMerkki(i, j));
+        nappi1008.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi1009.setText(piilosana.palautaMerkki(i, j));
+        nappi1009.setBackground(Color.LIGHT_GRAY);
         j++;
         nappi1010.setText(piilosana.palautaMerkki(i, j));
-
+        nappi1010.setBackground(Color.LIGHT_GRAY);
     }
 
     public void aloitaLaivanupotus() {
@@ -526,7 +631,15 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             laivanupotusNappi.setVisible(false);
             valitse.setText("Kiitos ja näkemiin!");
             repaint();
+        }
 
+        if (e.getSource().equals(piilosanaVastaaNappi)) {
+            if (etsittavaSana.equals(piilosanaVastaus)) {
+                etsittava.setText("Oikein!");
+            } else {
+                etsittava.setText("Yritä vielä! Sana oli " + etsittavaSana);
+            }
+//            repaint();
         }
 
         if (e.getSource().equals(nappi0101)) {
@@ -1764,6 +1877,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         nappi1010 = new javax.swing.JButton();
         piilosanaVastausKentta = new javax.swing.JLabel();
         etsittava = new javax.swing.JLabel();
+        piilosanaVastaaNappi = new javax.swing.JButton();
         laivanupotusPaneeli = new javax.swing.JPanel();
         lopetaPaneeli = new javax.swing.JPanel();
         lopetaNappi = new javax.swing.JButton();
@@ -1911,8 +2025,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         piilosanaOhje.setEditable(false);
         piilosanaOhje.setColumns(20);
         piilosanaOhje.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        piilosanaOhje.setRows(2);
-        piilosanaOhje.setText("Etsi taulukosta seuraava sana.\nSanan kirjaimet voivat olla missä tahansa suunnassa.\nVoit perua kirjaimen lisäyksen painamalla nappia uudestaan.\n");
+        piilosanaOhje.setRows(4);
+        piilosanaOhje.setText("Etsi taulukosta seuraava sana.\nSanan perättäiset kirjaimet voivat olla toisiina nähden missä tahansa suunnassa\n(ylhäällä, alhaalla, vieressä, kulmittain).\nVoit perua kirjaimen lisäyksen painamalla nappia uudestaan.\n");
         piilosanaOhje.setAutoscrolls(false);
         jScrollPane2.setViewportView(piilosanaOhje);
 
@@ -2821,6 +2935,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         etsittava.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         etsittava.setText("etsittava");
 
+        piilosanaVastaaNappi.setText("Vastaa");
+
         javax.swing.GroupLayout piilosanaPaneeliLayout = new javax.swing.GroupLayout(piilosanaPaneeli);
         piilosanaPaneeli.setLayout(piilosanaPaneeliLayout);
         piilosanaPaneeliLayout.setHorizontalGroup(
@@ -2833,191 +2949,194 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                     .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(nappi0101)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0102)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0103)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0104)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0105)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0106)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0107))
-                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(nappi0201)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0202)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0203)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0204)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0205)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0206)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0207))
-                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(nappi0301)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0302)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0303)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0304)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0305)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0306)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0307))
-                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(nappi0401)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0402)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0403)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0404)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0405)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0406)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0407))
-                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(nappi0501)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0502)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0503)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0504)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0505)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0506)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0507))
-                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(nappi0601)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0602)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0603)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0604)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0605)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0606)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0607, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(nappi0701)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0702)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0703)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0704)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0705)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0706)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0707))
-                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(nappi0801)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0802)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0803)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0804)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0805)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0806)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0807))
-                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(nappi1001)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi1002)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi1003)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi1004)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi1005)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi1006)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi1007))
-                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(nappi0901)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0902)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0903)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0904)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0905)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0906)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nappi0907)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nappi0108)
-                            .addComponent(nappi0208)
-                            .addComponent(nappi0308)
-                            .addComponent(nappi0408)
-                            .addComponent(nappi0508)
-                            .addComponent(nappi0608)
-                            .addComponent(nappi0708)
-                            .addComponent(nappi0808)
-                            .addComponent(nappi0908)
-                            .addComponent(nappi1008))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nappi0109)
-                            .addComponent(nappi0209)
-                            .addComponent(nappi0309)
-                            .addComponent(nappi0409)
-                            .addComponent(nappi0509)
-                            .addComponent(nappi0609)
-                            .addComponent(nappi0709)
-                            .addComponent(nappi0809)
-                            .addComponent(nappi0909)
-                            .addComponent(nappi1009))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nappi0110)
-                            .addComponent(nappi0210)
-                            .addComponent(nappi0310)
-                            .addComponent(nappi0410)
-                            .addComponent(nappi0510)
-                            .addComponent(nappi0610)
-                            .addComponent(nappi0710)
-                            .addComponent(nappi0810)
-                            .addComponent(nappi0910)
-                            .addComponent(nappi1010)))
-                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(piilosanaVastausKentta))
-                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(etsittava)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(81, Short.MAX_VALUE))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, piilosanaPaneeliLayout.createSequentialGroup()
+                                .addComponent(piilosanaVastausKentta)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(piilosanaVastaaNappi))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, piilosanaPaneeliLayout.createSequentialGroup()
+                                .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                        .addComponent(nappi0101)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0102)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0103)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0104)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0105)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0106)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0107))
+                                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                        .addComponent(nappi0201)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0202)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0203)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0204)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0205)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0206)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0207))
+                                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                        .addComponent(nappi0301)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0302)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0303)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0304)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0305)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0306)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0307))
+                                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                        .addComponent(nappi0401)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0402)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0403)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0404)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0405)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0406)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0407))
+                                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                        .addComponent(nappi0501)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0502)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0503)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0504)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0505)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0506)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0507))
+                                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                        .addComponent(nappi0601)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0602)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0603)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0604)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0605)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0606)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0607, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                        .addComponent(nappi0701)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0702)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0703)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0704)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0705)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0706)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0707))
+                                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                        .addComponent(nappi0801)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0802)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0803)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0804)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0805)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0806)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0807))
+                                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                        .addComponent(nappi1001)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi1002)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi1003)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi1004)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi1005)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi1006)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi1007))
+                                    .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                        .addComponent(nappi0901)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0902)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0903)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0904)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0905)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0906)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nappi0907)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nappi0108)
+                                    .addComponent(nappi0208)
+                                    .addComponent(nappi0308)
+                                    .addComponent(nappi0408)
+                                    .addComponent(nappi0508)
+                                    .addComponent(nappi0608)
+                                    .addComponent(nappi0708)
+                                    .addComponent(nappi0808)
+                                    .addComponent(nappi0908)
+                                    .addComponent(nappi1008))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nappi0109)
+                                    .addComponent(nappi0209)
+                                    .addComponent(nappi0309)
+                                    .addComponent(nappi0409)
+                                    .addComponent(nappi0509)
+                                    .addComponent(nappi0609)
+                                    .addComponent(nappi0709)
+                                    .addComponent(nappi0809)
+                                    .addComponent(nappi0909)
+                                    .addComponent(nappi1009))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nappi0110)
+                                    .addComponent(nappi0210)
+                                    .addComponent(nappi0310)
+                                    .addComponent(nappi0410)
+                                    .addComponent(nappi0510)
+                                    .addComponent(nappi0610)
+                                    .addComponent(nappi0710)
+                                    .addComponent(nappi0810)
+                                    .addComponent(nappi0910)
+                                    .addComponent(nappi1010))))))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         piilosanaPaneeliLayout.setVerticalGroup(
             piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3025,7 +3144,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 .addGap(5, 5, 5)
                 .addComponent(piilosanaOtsikko)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(etsittava)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3149,7 +3268,9 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                     .addComponent(nappi1009)
                     .addComponent(nappi1010))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(piilosanaVastausKentta)
+                .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(piilosanaVastausKentta)
+                    .addComponent(piilosanaVastaaNappi))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -3217,7 +3338,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                     .addComponent(laivanupotusPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lopetaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, 569, Short.MAX_VALUE)
                     .addComponent(valitsePaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(505, Short.MAX_VALUE))
+                .addContainerGap(511, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3233,7 +3354,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 .addComponent(laivanupotusPaneeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lopetaPaneeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -3813,6 +3934,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     private javax.swing.JTextArea piilosanaOhje;
     private javax.swing.JLabel piilosanaOtsikko;
     private javax.swing.JPanel piilosanaPaneeli;
+    private javax.swing.JButton piilosanaVastaaNappi;
     private javax.swing.JLabel piilosanaVastausKentta;
     private javax.swing.JLabel tuomioKentta;
     private javax.swing.JButton uudelleenNappi;
