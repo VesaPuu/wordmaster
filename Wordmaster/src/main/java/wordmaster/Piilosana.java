@@ -106,15 +106,14 @@ public class Piilosana {
      */
     public static boolean sijoitaSana(Sana sana) {
         char[] mtaulu = sanastaMerkkitaulukko(sana);
-        // arvotaan aloituskohta
-        int rivi = random.nextInt(10);
-        int sarake = random.nextInt(10);
-        System.out.println(sana);//
-        //sijoitetaan mtaulun merkit taulukkoon yksi kerrallaan
-        for (int i = 0; i < mtaulu.length; i++) {
+        int rivi = random.nextInt(10); // arvotaan aloitusrivi
+        int sarake = random.nextInt(10); // arvotaan aloitussarake
+        for (int i = 0; i < mtaulu.length; i++) {  //sijoitetaan mtaulun merkit taulukkoon yksi kerrallaan
 
             taulukko[rivi][sarake] = mtaulu[i];
+
 //            System.out.println(rivi + ", " + sarake);
+//            if (voikoSeuraavanSijoittaa(rivi, sarake)) {; // testataan, voiko seuraavan merkin sijoittaa johonkin lähellä olevista soluista
             while (true) {
                 int uusiRivi = muutaArvoaSatunnaisesti(rivi);
                 int uusiSarake = muutaArvoaSatunnaisesti(sarake);
@@ -126,10 +125,26 @@ public class Piilosana {
                     }
                 }
             }
+//            } else {
+//                return false;
+//            }
         }
         return true;
     }
 
+//    public static boolean voikoSeuraavanSijoittaa(int rivi, int sarake) {
+//        boolean voikoSijoittaa = false;
+//        for (int i = -1; i < 2; i++) {
+//            for (int j = -1; j < 2; j++) {
+//                if ((rivi + i >= 0 && rivi + i < 10 && sarake + j >= 0 && sarake + j < 10)) {
+//                    if ((onkoTyhja(rivi, sarake))) {
+//                        voikoSijoittaa = true;
+//                    }
+//                }
+//            }
+//        }
+//        return voikoSijoittaa;
+//    }
     public static int muutaArvoaSatunnaisesti(int arvo) {
         int muutos = random.nextInt(3);//
         int uusiArvo = arvo + muutos - 1;

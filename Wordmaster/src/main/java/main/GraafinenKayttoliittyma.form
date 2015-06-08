@@ -295,13 +295,8 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="piilosanaVastausKentta" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="piilosanaVastaaNappi" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="nappi0101" min="-2" max="-2" attributes="0"/>
@@ -494,6 +489,13 @@
                                       <Component id="nappi1010" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="piilosanaVastausKentta" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="piilosanaVastaaNappi" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="piilosanaUudelleenNappi" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
@@ -644,6 +646,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="piilosanaVastausKentta" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="piilosanaVastaaNappi" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="piilosanaUudelleenNappi" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -1897,6 +1900,14 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Vastaa"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="piilosanaUudelleenNappi">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Uudestaan"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="piilosanaUudelleenNappiActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

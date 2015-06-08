@@ -143,6 +143,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         nappi1010.addActionListener(this);
         okNappi.addActionListener(this);
         piilosanaVastaaNappi.addActionListener(this);
+        piilosanaUudelleenNappi.addActionListener(this);
         this.tl = new TiedostonLukija(); // luodaan uusi Tiedostonlukija-olio
         tl.lueTiedosto();
         this.anagrammi = new Anagrammi();
@@ -619,6 +620,10 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
 
         if (e.getSource().equals(uudelleenNappi)) {
             aloitaAnagrammi();
+        }
+
+        if (e.getSource().equals(piilosanaUudelleenNappi)) {
+            aloitaPiilosana();
         }
 
         if (e.getSource().equals(lopetaNappi)) {
@@ -1878,6 +1883,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         piilosanaVastausKentta = new javax.swing.JLabel();
         etsittava = new javax.swing.JLabel();
         piilosanaVastaaNappi = new javax.swing.JButton();
+        piilosanaUudelleenNappi = new javax.swing.JButton();
         laivanupotusPaneeli = new javax.swing.JPanel();
         lopetaPaneeli = new javax.swing.JPanel();
         lopetaNappi = new javax.swing.JButton();
@@ -2937,6 +2943,13 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
 
         piilosanaVastaaNappi.setText("Vastaa");
 
+        piilosanaUudelleenNappi.setText("Uudestaan");
+        piilosanaUudelleenNappi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                piilosanaUudelleenNappiActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout piilosanaPaneeliLayout = new javax.swing.GroupLayout(piilosanaPaneeli);
         piilosanaPaneeli.setLayout(piilosanaPaneeliLayout);
         piilosanaPaneeliLayout.setHorizontalGroup(
@@ -2953,12 +2966,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, piilosanaPaneeliLayout.createSequentialGroup()
-                                .addComponent(piilosanaVastausKentta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(piilosanaVastaaNappi))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, piilosanaPaneeliLayout.createSequentialGroup()
+                        .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
                                 .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
                                         .addComponent(nappi0101)
@@ -3135,7 +3144,13 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                                     .addComponent(nappi0710)
                                     .addComponent(nappi0810)
                                     .addComponent(nappi0910)
-                                    .addComponent(nappi1010))))))
+                                    .addComponent(nappi1010)))
+                            .addGroup(piilosanaPaneeliLayout.createSequentialGroup()
+                                .addComponent(piilosanaVastausKentta)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(piilosanaVastaaNappi)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(piilosanaUudelleenNappi)))))
                 .addContainerGap(58, Short.MAX_VALUE))
         );
         piilosanaPaneeliLayout.setVerticalGroup(
@@ -3270,7 +3285,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(piilosanaVastausKentta)
-                    .addComponent(piilosanaVastaaNappi))
+                    .addComponent(piilosanaVastaaNappi)
+                    .addComponent(piilosanaUudelleenNappi))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -3776,6 +3792,10 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         // TODO add your handling code here:
     }//GEN-LAST:event_pelaajanNimiActionPerformed
 
+    private void piilosanaUudelleenNappiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piilosanaUudelleenNappiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_piilosanaUudelleenNappiActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3934,6 +3954,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     private javax.swing.JTextArea piilosanaOhje;
     private javax.swing.JLabel piilosanaOtsikko;
     private javax.swing.JPanel piilosanaPaneeli;
+    private javax.swing.JButton piilosanaUudelleenNappi;
     private javax.swing.JButton piilosanaVastaaNappi;
     private javax.swing.JLabel piilosanaVastausKentta;
     private javax.swing.JLabel tuomioKentta;
