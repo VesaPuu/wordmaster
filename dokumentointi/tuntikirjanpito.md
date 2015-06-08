@@ -80,4 +80,6 @@
 - Käyttöliittymän rakentamista, Piilosana-pelin koodaamista
 - luokkakaavio päivitetty
 
+6.6. 1,5 h
 
+- Piilosana-pelin koodaamista (vastaa-toiminto ja vastauksen tarkistus, Piilosana-luokkaan lisätty metodeja)
