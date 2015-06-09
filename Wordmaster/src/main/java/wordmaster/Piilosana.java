@@ -6,9 +6,7 @@ import java.util.Random;
  * Piilosana-luokkaa tarvitaan Piilosana-pelin taulukon luomiseen. Luokan
  * välineillä taulukkoon voidaan sijoittaa sanoja satunnaisesti merkki
  * kerrallaan ja palauttaa tieto siitä, mikä merkki on missäkin taulukon
- * solussa.
- *
- * @author Vesa
+ * solussa.*
  */
 public class Piilosana {
 
@@ -63,7 +61,7 @@ public class Piilosana {
      * @return
      */
     public static char[] sanastaMerkkitaulukko(Sana sana) {
-        // tehdÃ¤Ã¤n sanasta merkkitaulukko
+        // tehdään sanasta merkkitaulukko
         char[] mtaulu = sana.getSana().toCharArray();
         return mtaulu;
     }
@@ -73,7 +71,6 @@ public class Piilosana {
             for (int j = 0; j < 10; j++) {
 
                 taulukko[i][j] = 0;
-
             }
         }
     }
@@ -83,11 +80,9 @@ public class Piilosana {
 
             for (int j = 0; j < 10; j++) {
                 if (onkoTyhja(i, j)) {
-
                     taulukko[i][j] = satunnainenMerkki();
                 }
             }
-
         }
     }
 
@@ -96,7 +91,6 @@ public class Piilosana {
         Random r = new Random();
         final int pituus = aakkoset.length();
         return aakkoset.charAt(r.nextInt(pituus));
-
     }
 
     /**
@@ -113,7 +107,7 @@ public class Piilosana {
             taulukko[rivi][sarake] = mtaulu[i];
 
 //            System.out.println(rivi + ", " + sarake);
-//            if (voikoSeuraavanSijoittaa(rivi, sarake)) {; // testataan, voiko seuraavan merkin sijoittaa johonkin lähellä olevista soluista
+//            if (voikoSeuraavanSijoittaa(rivi, sarake)) {; // testataan, voiko seuraavan merkin sijoittaa johonkin lÃ¤hellÃ¤ olevista soluista
             while (true) {
                 int uusiRivi = muutaArvoaSatunnaisesti(rivi);
                 int uusiSarake = muutaArvoaSatunnaisesti(sarake);
@@ -150,18 +144,5 @@ public class Piilosana {
         int muutos = random.nextInt(3);//
         int uusiArvo = arvo + muutos - 1;
         return uusiArvo;
-    }
-
-    /**
-     *
-     */
-    public void tulosta() {
-        for (int rivi = 0; rivi < taulukko.length; ++rivi) {
-            for (int sarake = 0; sarake < taulukko[rivi].length; ++sarake) {
-                System.out.print(palautaMerkki(rivi, sarake));
-            }
-            System.out.print("\n");
-        }
-        System.out.println();
     }
 }

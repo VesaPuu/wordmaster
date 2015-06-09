@@ -14,7 +14,6 @@ import wordmaster.Sana;
 public class GraafinenKayttoliittyma extends javax.swing.JFrame implements ActionListener {
 
     static TiedostonLukija tl;
-//    Anagrammi anagrammi;
     Piilosana piilosana;
     Pelaaja pelaaja;
     int vihjeet;
@@ -167,6 +166,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         okNappi.setVisible(false);
         String nimi = pelaaja.getNimi();
         valitse.setText("Tervetuloa " + nimi + "! Valitse peli:");
+
 //        valitse.setText("Tervetuloa " + pelaaja.getNimi() + ", valitse peli:");
 //        valitse.setVisible(true);
 //        anagrammiNappi.setVisible(true);
