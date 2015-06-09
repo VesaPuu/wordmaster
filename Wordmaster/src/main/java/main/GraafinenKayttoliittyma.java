@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import wordmaster.Anagrammi;
+//import wordmaster.Anagrammi;
 import wordmaster.Pelaaja;
 import wordmaster.Piilosana;
 import wordmaster.Sana;
@@ -14,7 +14,7 @@ import wordmaster.Sana;
 public class GraafinenKayttoliittyma extends javax.swing.JFrame implements ActionListener {
 
     static TiedostonLukija tl;
-    Anagrammi anagrammi;
+//    Anagrammi anagrammi;
     Piilosana piilosana;
     Pelaaja pelaaja;
     int vihjeet;
@@ -33,6 +33,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         initComponents();
         pelaajanNimi.setText("");
         anagrammiKentta.setText("");
+        pelaajanNimi.addActionListener(this);
         vastaaNappi.addActionListener(this);
         vastaus.addActionListener(this);
         anagrammiNappi.addActionListener(this);
@@ -146,7 +147,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         piilosanaUudelleenNappi.addActionListener(this);
         this.tl = new TiedostonLukija(); // luodaan uusi Tiedostonlukija-olio
         tl.lueTiedosto();
-        this.anagrammi = new Anagrammi();
+//        this.anagrammi = new Anagrammi();
         this.piilosana = new Piilosana();
         this.vihjeet = 0;
         this.sananPituus = 0;
@@ -184,7 +185,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         vastaaNappi.setVisible(true);
         vihjeita.setVisible(true);
         anagrammiksiMuutettava = tl.sanasto.luoRandomSana();
-        String anagrammiSana = anagrammi.aloita(anagrammiksiMuutettava);
+//        String anagrammiSana = anagrammi.aloita(anagrammiksiMuutettava);
+        String anagrammiSana = anagrammiksiMuutettava.randomAnagrammi(anagrammiksiMuutettava.getSana());
         sananPituus = anagrammiSana.length();
         anagrammiKentta.setText(anagrammiSana);
         vihjeteksti = Character.toString(anagrammiksiMuutettava.getSana().charAt(0));
@@ -547,13 +549,31 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     public void aloitaLaivanupotus() {
     }
 
+    public static boolean ovatkoAnagrammeja(String sana, String anagrammi) {
+
+        if (sana.length() != anagrammi.length()) {
+            return false;
+        }
+        char[] merkit = sana.toUpperCase().toCharArray();
+        for (char m : merkit) {
+            int index = anagrammi.indexOf(m);
+            if (index != -1) {
+                anagrammi = anagrammi.substring(0, index) + anagrammi.substring(index + 1, anagrammi.length());
+            } else {
+                return false;
+            }
+        }
+        return anagrammi.isEmpty();
+    }
+
     public void actionPerformed(ActionEvent e) {
 
-        if (e.getSource().equals(okNappi)) {
+        Object aiheuttaja = e.getSource();
+
+        if (e.getSource().equals(okNappi) || aiheuttaja == pelaajanNimi) {
             this.pelaaja = new Pelaaja(pelaajanNimi.getText());
             valitsePaneeli.setVisible(true);
             aloita();
-
         }
 
         if (e.getSource().equals(anagrammiNappi)) {
@@ -577,10 +597,10 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             aloitaLaivanupotus();
         }
 
-        if (e.getSource().equals(vastaaNappi)) {
+        if (e.getSource().equals(vastaaNappi) || aiheuttaja == vastaus) {
             tuomioKentta.setText("");
 
-            if (Anagrammi.ovatkoAnagrammeja(vastaus.getText(), anagrammiksiMuutettava.getSana())) {
+            if (ovatkoAnagrammeja(vastaus.getText(), anagrammiksiMuutettava.getSana())) {
 
                 anagrammiKentta.setText("");
                 vihje.setText("");
