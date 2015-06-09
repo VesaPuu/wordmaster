@@ -21,18 +21,10 @@ public class Pelaaja {
         this.pisteet = 0;
     }
 
-    /**
-     *
-     * @return
-     */
     public int getPisteet() {
         return this.pisteet;
     }
 
-    /**
-     *
-     * @return
-     */
     public String getNimi() {
         return this.nimi;
     }
@@ -42,8 +34,13 @@ public class Pelaaja {
      * @param pisteet
      * @return
      */
-    public boolean setPisteet(int pisteet) {
-        this.pisteet = pisteet;
+    public boolean setPisteet(int uusiArvo) {
+        this.pisteet = uusiArvo;
+        return true;
+    }
+
+    public boolean lisaaPisteet(int lisays) {
+        this.pisteet = pisteet + lisays;
         return true;
     }
 
