@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 //import wordmaster.Anagrammi;
@@ -23,6 +24,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     String vihjeteksti;
     String piilosanaVastaus;
     String etsittavaSana;
+    private static Random random;
 //    String sijoitettava;
 
     /**
@@ -150,6 +152,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         this.piilosana = new Piilosana();
         this.vihjeet = 0;
         this.sananPituus = 0;
+        this.random = new Random();
         //        valitse.setVisible(false);
 //        anagrammiNappi.setVisible(false);
 //        piilosanaNappi.setVisible(false);
@@ -186,7 +189,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         vihjeita.setVisible(true);
         anagrammiksiMuutettava = tl.sanasto.luoRandomSana();
 //        String anagrammiSana = anagrammi.aloita(anagrammiksiMuutettava);
-        String anagrammiSana = anagrammiksiMuutettava.randomAnagrammi(anagrammiksiMuutettava.getSana());
+        String anagrammiSana = randomAnagrammi(anagrammiksiMuutettava.getSana());
         sananPituus = anagrammiSana.length();
         anagrammiKentta.setText(anagrammiSana);
         vihjeteksti = Character.toString(anagrammiksiMuutettava.getSana().charAt(0));
@@ -564,6 +567,23 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             }
         }
         return anagrammi.isEmpty();
+    }
+
+    public String randomAnagrammi(String input) {
+        char[] mtaulu = input.toCharArray();
+        String anagrammi = "";
+        int pituus = input.length();
+        for (int i = 0; i < input.length(); i++) {
+            while (true) {
+                int r = random.nextInt(pituus);
+                if (mtaulu[r] != 0) {
+                    anagrammi = anagrammi + mtaulu[r];
+                    mtaulu[r] = 0;
+                    break;
+                }
+            }
+        }
+        return anagrammi;
     }
 
     public void actionPerformed(ActionEvent e) {
