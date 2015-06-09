@@ -22,20 +22,6 @@ public class SanastoTest {
     }
 
     @Test
-    public void testTulostaSanat() {
-        Sanasto s = new Sanasto();
-        assertEquals(true, s.tulostaSanat());
-    }
-
-    @Test
-    public void testGetSana() {
-        Sanasto s = new Sanasto();
-        Sana sana = new Sana("hohotus");
-        s.lisaaSana(sana);
-        assertEquals(sana, s.getSana(0));
-    }
-
-    @Test
     public void testLuoRandomSana() {
         Sanasto s = new Sanasto();
         s.lisaaSana(new Sana("hohotus"));

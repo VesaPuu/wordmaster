@@ -5,9 +5,7 @@ import java.util.Random;
 
 /**
  * Sanasto-luokan ilmentymän sisältämään ArrayListiin tallennetaan Sana-olioita.
- * Sanastosta voidaan palauttaa yksi satunnainen sana tai useamman sanan otos.
- *
- * @author Vesa
+ * Sanastosta voidaan palauttaa yksi satunnainen sana tai useamman sanan otos. *
  */
 public class Sanasto {
 
@@ -49,29 +47,6 @@ public class Sanasto {
         Sanasto.sanat.add(sana);
 
         return true;
-    }
-
-    /**
-     * Tulostaa koko ArrayListin sisällön (testikäyttöä varten)
-     *
-     * @return palauttaa arvon "true", jos tulostus onnistuu
-     */
-    public boolean tulostaSanat() {
-        System.out.println("SANASTO: ");
-        for (Object sanat1 : sanat) {
-            System.out.println(sanat1);
-        }
-        return true;
-    }
-
-    /**
-     * Palauttaa Sana-olion indeksin perusteella
-     *
-     * @param index indeksi
-     * @return indeksiä vastaava Sana-olio
-     */
-    public Sana getSana(int index) {
-        return (Sana) sanat.get(index);
     }
 
     /**
