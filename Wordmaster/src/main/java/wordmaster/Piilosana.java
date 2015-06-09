@@ -88,6 +88,7 @@ public class Piilosana {
 
     private static char satunnainenMerkki() {
         final String aakkoset = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
+
         Random r = new Random();
         final int pituus = aakkoset.length();
         return aakkoset.charAt(r.nextInt(pituus));
@@ -99,47 +100,29 @@ public class Piilosana {
      * @return
      */
     public static boolean sijoitaSana(Sana sana) {
+        int sijoitettu = 0;
         char[] mtaulu = sanastaMerkkitaulukko(sana);
-        int rivi = random.nextInt(10); // arvotaan aloitusrivi
-        int sarake = random.nextInt(10); // arvotaan aloitussarake
-        for (int i = 0; i < mtaulu.length; i++) {  //sijoitetaan mtaulun merkit taulukkoon yksi kerrallaan
-
-            taulukko[rivi][sarake] = mtaulu[i];
-
-//            System.out.println(rivi + ", " + sarake);
-//            if (voikoSeuraavanSijoittaa(rivi, sarake)) {; // testataan, voiko seuraavan merkin sijoittaa johonkin lÃ¤hellÃ¤ olevista soluista
-            while (true) {
+        while (sijoitettu < mtaulu.length) {
+            tyhjennaKaikki();
+            sijoitettu = 0;
+            int rivi = random.nextInt(10); // arvotaan aloitusrivi
+            int sarake = random.nextInt(10); // arvotaan aloitussarake
+            for (int i = 0; i < mtaulu.length; i++) {  //sijoitetaan mtaulun merkit taulukkoon yksi kerrallaan
+                taulukko[rivi][sarake] = mtaulu[i];
                 int uusiRivi = muutaArvoaSatunnaisesti(rivi);
                 int uusiSarake = muutaArvoaSatunnaisesti(sarake);
                 if ((uusiRivi >= 0 && uusiRivi < 10 && uusiSarake >= 0 && uusiSarake < 10)) {
                     if ((onkoTyhja(uusiRivi, uusiSarake))) {//
                         rivi = uusiRivi;
                         sarake = uusiSarake;
-                        break;
+                        sijoitettu++;
                     }
                 }
             }
-
-//            } else {
-//                return false;
-//            }
         }
         return true;
     }
 
-//    public static boolean voikoSeuraavanSijoittaa(int rivi, int sarake) {
-//        boolean voikoSijoittaa = false;
-//        for (int i = -1; i < 2; i++) {
-//            for (int j = -1; j < 2; j++) {
-//                if ((rivi + i >= 0 && rivi + i < 10 && sarake + j >= 0 && sarake + j < 10)) {
-//                    if ((onkoTyhja(rivi, sarake))) {
-//                        voikoSijoittaa = true;
-//                    }
-//                }
-//            }
-//        }
-//        return voikoSijoittaa;
-//    }
     public static int muutaArvoaSatunnaisesti(int arvo) {
         int muutos = random.nextInt(3);//
         int uusiArvo = arvo + muutos - 1;
