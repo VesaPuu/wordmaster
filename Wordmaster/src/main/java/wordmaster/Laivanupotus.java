@@ -3,12 +3,9 @@ package wordmaster;
 import java.util.Random;
 
 /**
- * Piilosana-luokkaa tarvitaan Piilosana-pelin taulukon luomiseen. Luokan
- * välineillä taulukkoon voidaan sijoittaa sanoja satunnaisesti merkki
- * kerrallaan ja palauttaa tieto siitä, mikä merkki on missäkin taulukon
- * solussa.*
+ *
  */
-public class Piilosana {
+public class Laivanupotus {
 
     public static char[][] taulukko;
     private static Random random;
@@ -16,8 +13,8 @@ public class Piilosana {
     /**
      *
      */
-    public Piilosana() {
-        this.taulukko = new char[10][10];
+    public Laivanupotus() {
+        this.taulukko = new char[5][5];
         this.random = new Random();
     }
 
@@ -66,8 +63,8 @@ public class Piilosana {
     }
 
     public static void tyhjennaKaikki() {
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
 
                 taulukko[i][j] = 0;
             }
@@ -75,9 +72,9 @@ public class Piilosana {
     }
 
     public static void taytaKaikki() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
 
-            for (int j = 0; j < 10; j++) {
+            for (int j = 0; j < 5; j++) {
                 if (onkoTyhja(i, j)) {
                     taulukko[i][j] = satunnainenMerkki();
                 }
@@ -104,13 +101,13 @@ public class Piilosana {
         while (sijoitettu < mtaulu.length) {
             tyhjennaKaikki();
             sijoitettu = 0;
-            int rivi = random.nextInt(10); // arvotaan aloitusrivi
-            int sarake = random.nextInt(10); // arvotaan aloitussarake
+            int rivi = random.nextInt(5); // arvotaan aloitusrivi
+            int sarake = random.nextInt(5); // arvotaan aloitussarake
             for (int i = 0; i < mtaulu.length; i++) {  //sijoitetaan mtaulun merkit taulukkoon yksi kerrallaan
                 taulukko[rivi][sarake] = mtaulu[i];
                 int uusiRivi = muutaArvoaSatunnaisesti(rivi);
                 int uusiSarake = muutaArvoaSatunnaisesti(sarake);
-                if ((uusiRivi >= 0 && uusiRivi < 10 && uusiSarake >= 0 && uusiSarake < 10)) {
+                if ((uusiRivi >= 0 && uusiRivi < 5 && uusiSarake >= 0 && uusiSarake < 5)) {
                     if ((onkoTyhja(uusiRivi, uusiSarake))) {//
                         rivi = uusiRivi;
                         sarake = uusiSarake;

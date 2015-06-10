@@ -28,11 +28,11 @@
                   <Component id="ylaPaneeli" max="32767" attributes="0"/>
                   <Component id="anagrammiPaneeli" max="32767" attributes="0"/>
                   <Component id="piilosanaPaneeli" max="32767" attributes="0"/>
-                  <Component id="laivanupotusPaneeli" max="32767" attributes="0"/>
-                  <Component id="lopetaPaneeli" pref="569" max="32767" attributes="0"/>
+                  <Component id="lopetaPaneeli" max="32767" attributes="0"/>
                   <Component id="valitsePaneeli" alignment="0" max="32767" attributes="0"/>
+                  <Component id="laivanupotusPaneeli" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="511" max="32767" attributes="0"/>
+              <EmptySpace pref="557" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -213,7 +213,7 @@
                       </Group>
                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="189" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -499,7 +499,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1922,7 +1922,351 @@
         </Property>
       </Properties>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane1" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="laivanupotusNappi1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi11" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi16" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi21" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="laivanupotusNappi2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi7" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi12" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi17" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi22" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="laivanupotusNappi3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi13" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi18" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi23" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="laivanupotusNappi4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi9" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi14" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi19" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi24" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="laivanupotusNappi5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi10" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi15" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi20" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusNappi25" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="upotettavaKentta" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="laivanupotusOtsikko" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="365" pref="365" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="laivanupotusOtsikko" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="52" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="laivanupotusNappi1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="upotettavaKentta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="laivanupotusNappi6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="laivanupotusNappi11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi12" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi13" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi14" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi15" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="laivanupotusNappi16" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi17" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi18" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi19" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi20" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="laivanupotusNappi21" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi22" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi23" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi24" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusNappi25" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextArea1">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="laivanupotusOtsikko">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Laivanupotus"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi2ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi3ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi4ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi5ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi6ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi7ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi8ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi9">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi9ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi10">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi10ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi11">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi11ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi12">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi12ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi13">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi13ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi14">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi14ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi15">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi15ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi16">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi16ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi17">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi17ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi18">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi18ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi19">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi19ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi20">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi20ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi21">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi21ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi22">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi22ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi23">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi23ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi24">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi24ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="laivanupotusNappi25">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi25ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="upotettavaKentta">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="upotettava"/>
+          </Properties>
+        </Component>
+      </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="lopetaPaneeli">
       <Properties>

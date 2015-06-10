@@ -7,15 +7,16 @@ import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-//import wordmaster.Anagrammi;
 import wordmaster.Pelaaja;
 import wordmaster.Piilosana;
 import wordmaster.Sana;
+import wordmaster.Laivanupotus;
 
 public class GraafinenKayttoliittyma extends javax.swing.JFrame implements ActionListener {
 
     static TiedostonLukija tl;
     Piilosana piilosana;
+    Laivanupotus laivanupotus;
     Pelaaja pelaaja;
     int vihjeet;
     int sananPituus;
@@ -24,6 +25,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     String vihjeteksti;
     String piilosanaVastaus;
     String etsittavaSana;
+    String upotettavaSana;
     private static Random random;
 //    String sijoitettava;
 
@@ -34,6 +36,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         initComponents();
         pelaajanNimi.setText("");
         anagrammiKentta.setText("");
+        upotettavaKentta.setText("");
         pelaajanNimi.addActionListener(this);
         vastaaNappi.addActionListener(this);
         vastaus.addActionListener(this);
@@ -143,20 +146,41 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         nappi1008.addActionListener(this);
         nappi1009.addActionListener(this);
         nappi1010.addActionListener(this);
+        laivanupotusNappi1.addActionListener(this);
+        laivanupotusNappi2.addActionListener(this);
+        laivanupotusNappi3.addActionListener(this);
+        laivanupotusNappi4.addActionListener(this);
+        laivanupotusNappi5.addActionListener(this);
+        laivanupotusNappi6.addActionListener(this);
+        laivanupotusNappi7.addActionListener(this);
+        laivanupotusNappi8.addActionListener(this);
+        laivanupotusNappi9.addActionListener(this);
+        laivanupotusNappi10.addActionListener(this);
+        laivanupotusNappi11.addActionListener(this);
+        laivanupotusNappi12.addActionListener(this);
+        laivanupotusNappi13.addActionListener(this);
+        laivanupotusNappi14.addActionListener(this);
+        laivanupotusNappi15.addActionListener(this);
+        laivanupotusNappi16.addActionListener(this);
+        laivanupotusNappi17.addActionListener(this);
+        laivanupotusNappi18.addActionListener(this);
+        laivanupotusNappi19.addActionListener(this);
+        laivanupotusNappi20.addActionListener(this);
+        laivanupotusNappi21.addActionListener(this);
+        laivanupotusNappi22.addActionListener(this);
+        laivanupotusNappi23.addActionListener(this);
+        laivanupotusNappi24.addActionListener(this);
+        laivanupotusNappi25.addActionListener(this);
         okNappi.addActionListener(this);
         piilosanaVastaaNappi.addActionListener(this);
         piilosanaUudelleenNappi.addActionListener(this);
         this.tl = new TiedostonLukija(); // luodaan uusi Tiedostonlukija-olio
         tl.lueTiedosto();
-//        this.anagrammi = new Anagrammi();
         this.piilosana = new Piilosana();
+        this.laivanupotus = new Laivanupotus();
         this.vihjeet = 0;
         this.sananPituus = 0;
         this.random = new Random();
-        //        valitse.setVisible(false);
-//        anagrammiNappi.setVisible(false);
-//        piilosanaNappi.setVisible(false);
-//        laivanupotusNappi.setVisible(false);
         valitsePaneeli.setVisible(false);
         anagrammiPaneeli.setVisible(false);
         piilosanaPaneeli.setVisible(false);
@@ -169,12 +193,6 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         okNappi.setVisible(false);
         String nimi = pelaaja.getNimi();
         valitse.setText("Tervetuloa " + nimi + "! Valitse peli:");
-
-//        valitse.setText("Tervetuloa " + pelaaja.getNimi() + ", valitse peli:");
-//        valitse.setVisible(true);
-//        anagrammiNappi.setVisible(true);
-//        piilosanaNappi.setVisible(true);
-//        laivanupotusNappi.setVisible(true);
         repaint();
     }
 
@@ -188,14 +206,12 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         vastaaNappi.setVisible(true);
         vihjeita.setVisible(true);
         anagrammiksiMuutettava = tl.sanasto.luoRandomSana();
-//        String anagrammiSana = anagrammi.aloita(anagrammiksiMuutettava);
         String anagrammiSana = randomAnagrammi(anagrammiksiMuutettava.getSana());
         sananPituus = anagrammiSana.length();
         anagrammiKentta.setText(anagrammiSana);
         vihjeteksti = Character.toString(anagrammiksiMuutettava.getSana().charAt(0));
         vihje.setText("Sana alkaa " + vihjeteksti);
         vihjeita.setText("Vihjeet " + vihjeet + ", sanan pituus " + sananPituus);
-
     }
 
     public void aloitaPiilosana() {
@@ -550,6 +566,44 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     }
 
     public void aloitaLaivanupotus() {
+        laivanupotus.tyhjennaKaikki();
+        upotettavaSana = "";
+//        piilosanaVastaus = "";
+//        etsittavaSana = "";
+//        piilosanaVastausKentta.setText("Vastaus: ");
+//        Sana upotettava = tl.sanasto.luoRandomSana();
+        Sana upotettava = new Sana("kissa");
+        laivanupotus.sijoitaSana(upotettava);
+//        piilosana.taytaKaikki();
+        upotettavaSana = upotettava.getSana();
+        upotettavaKentta.setText(upotettavaSana);
+        int i = 0;
+        int j = 0;
+        laivanupotusNappi1.setBackground(Color.BLACK);
+        laivanupotusNappi2.setBackground(Color.BLACK);
+        laivanupotusNappi3.setBackground(Color.BLACK);
+        laivanupotusNappi4.setBackground(Color.BLACK);
+        laivanupotusNappi5.setBackground(Color.BLACK);
+        laivanupotusNappi6.setBackground(Color.BLACK);
+        laivanupotusNappi7.setBackground(Color.BLACK);
+        laivanupotusNappi8.setBackground(Color.BLACK);
+        laivanupotusNappi9.setBackground(Color.BLACK);
+        laivanupotusNappi10.setBackground(Color.BLACK);
+        laivanupotusNappi11.setBackground(Color.BLACK);
+        laivanupotusNappi12.setBackground(Color.BLACK);
+        laivanupotusNappi13.setBackground(Color.BLACK);
+        laivanupotusNappi14.setBackground(Color.BLACK);
+        laivanupotusNappi15.setBackground(Color.BLACK);
+        laivanupotusNappi16.setBackground(Color.BLACK);
+        laivanupotusNappi17.setBackground(Color.BLACK);
+        laivanupotusNappi18.setBackground(Color.BLACK);
+        laivanupotusNappi19.setBackground(Color.BLACK);
+        laivanupotusNappi20.setBackground(Color.BLACK);
+        laivanupotusNappi21.setBackground(Color.BLACK);
+        laivanupotusNappi22.setBackground(Color.BLACK);
+        laivanupotusNappi23.setBackground(Color.BLACK);
+        laivanupotusNappi24.setBackground(Color.BLACK);
+        laivanupotusNappi25.setBackground(Color.BLACK);
     }
 
     public static boolean ovatkoAnagrammeja(String sana, String anagrammi) {
@@ -1790,6 +1844,231 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             }
         }
 
+        if (e.getSource().equals(laivanupotusNappi1)) {
+            if (laivanupotusNappi1.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi1.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi1.setText(laivanupotus.palautaMerkki(0, 0));
+            } else {//
+                laivanupotusNappi1.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi2)) {
+            if (laivanupotusNappi2.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi2.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi2.setText(laivanupotus.palautaMerkki(0, 1));
+            } else {//
+                laivanupotusNappi2.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi3)) {
+            if (laivanupotusNappi3.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi3.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi3.setText(laivanupotus.palautaMerkki(0, 2));
+            } else {//
+                laivanupotusNappi3.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi4)) {
+            if (laivanupotusNappi4.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi4.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi4.setText(laivanupotus.palautaMerkki(0, 3));
+            } else {//
+                laivanupotusNappi4.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi5)) {
+            if (laivanupotusNappi5.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi5.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi5.setText(laivanupotus.palautaMerkki(0, 4));
+            } else {//
+                laivanupotusNappi5.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi6)) {
+            if (laivanupotusNappi6.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi6.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi6.setText(laivanupotus.palautaMerkki(1, 0));
+            } else {//
+                laivanupotusNappi6.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi7)) {
+            if (laivanupotusNappi7.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi7.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi7.setText(laivanupotus.palautaMerkki(1, 1));
+            } else {//
+                laivanupotusNappi7.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi8)) {
+            if (laivanupotusNappi8.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi8.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi8.setText(laivanupotus.palautaMerkki(1, 2));
+            } else {//
+                laivanupotusNappi8.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi9)) {
+            if (laivanupotusNappi9.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi9.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi9.setText(laivanupotus.palautaMerkki(1, 3));
+            } else {//
+                laivanupotusNappi9.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi10)) {
+            if (laivanupotusNappi10.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi10.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi10.setText(laivanupotus.palautaMerkki(1, 4));
+            } else {//
+                laivanupotusNappi10.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi11)) {
+            if (laivanupotusNappi11.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi11.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi11.setText(laivanupotus.palautaMerkki(2, 0));
+            } else {//
+                laivanupotusNappi11.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi12)) {
+            if (laivanupotusNappi12.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi12.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi12.setText(laivanupotus.palautaMerkki(2, 1));
+            } else {//
+                laivanupotusNappi12.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi13)) {
+            if (laivanupotusNappi13.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi13.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi13.setText(laivanupotus.palautaMerkki(2, 2));
+            } else {//
+                laivanupotusNappi13.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi14)) {
+            if (laivanupotusNappi14.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi14.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi14.setText(laivanupotus.palautaMerkki(2, 3));
+            } else {//
+                laivanupotusNappi14.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi15)) {
+            if (laivanupotusNappi15.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi15.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi15.setText(laivanupotus.palautaMerkki(2, 4));
+            } else {//
+                laivanupotusNappi15.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi16)) {
+            if (laivanupotusNappi16.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi16.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi16.setText(laivanupotus.palautaMerkki(3, 0));
+            } else {//
+                laivanupotusNappi16.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi17)) {
+            if (laivanupotusNappi17.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi17.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi17.setText(laivanupotus.palautaMerkki(3, 1));
+            } else {//
+                laivanupotusNappi17.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi18)) {
+            if (laivanupotusNappi18.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi18.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi18.setText(laivanupotus.palautaMerkki(3, 2));
+            } else {//
+                laivanupotusNappi18.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi19)) {
+            if (laivanupotusNappi19.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi19.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi19.setText(laivanupotus.palautaMerkki(3, 3));
+            } else {//
+                laivanupotusNappi19.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi20)) {
+            if (laivanupotusNappi20.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi20.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi20.setText(laivanupotus.palautaMerkki(3, 4));
+            } else {//
+                laivanupotusNappi20.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi21)) {
+            if (laivanupotusNappi21.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi21.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi21.setText(laivanupotus.palautaMerkki(4, 0));
+            } else {//
+                laivanupotusNappi21.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi22)) {
+            if (laivanupotusNappi22.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi22.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi22.setText(laivanupotus.palautaMerkki(4, 1));
+            } else {//
+                laivanupotusNappi22.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi23)) {
+            if (laivanupotusNappi23.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi23.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi23.setText(laivanupotus.palautaMerkki(4, 2));
+            } else {//
+                laivanupotusNappi23.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi24)) {
+            if (laivanupotusNappi24.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi24.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi24.setText(laivanupotus.palautaMerkki(4, 3));
+            } else {//
+                laivanupotusNappi24.setBackground(Color.BLACK);
+            }
+        }
+
+        if (e.getSource().equals(laivanupotusNappi25)) {
+            if (laivanupotusNappi25.getBackground().equals(Color.BLACK)) {//
+                laivanupotusNappi25.setBackground(Color.LIGHT_GRAY);
+                laivanupotusNappi25.setText(laivanupotus.palautaMerkki(4, 4));
+            } else {//
+                laivanupotusNappi25.setBackground(Color.BLACK);
+            }
+        }
+
     }
 
     /**
@@ -1925,6 +2204,35 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         piilosanaVastaaNappi = new javax.swing.JButton();
         piilosanaUudelleenNappi = new javax.swing.JButton();
         laivanupotusPaneeli = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        laivanupotusOtsikko = new javax.swing.JLabel();
+        laivanupotusNappi1 = new javax.swing.JButton();
+        laivanupotusNappi2 = new javax.swing.JButton();
+        laivanupotusNappi3 = new javax.swing.JButton();
+        laivanupotusNappi4 = new javax.swing.JButton();
+        laivanupotusNappi5 = new javax.swing.JButton();
+        laivanupotusNappi6 = new javax.swing.JButton();
+        laivanupotusNappi7 = new javax.swing.JButton();
+        laivanupotusNappi8 = new javax.swing.JButton();
+        laivanupotusNappi9 = new javax.swing.JButton();
+        laivanupotusNappi10 = new javax.swing.JButton();
+        laivanupotusNappi11 = new javax.swing.JButton();
+        laivanupotusNappi12 = new javax.swing.JButton();
+        laivanupotusNappi13 = new javax.swing.JButton();
+        laivanupotusNappi14 = new javax.swing.JButton();
+        laivanupotusNappi15 = new javax.swing.JButton();
+        laivanupotusNappi16 = new javax.swing.JButton();
+        laivanupotusNappi17 = new javax.swing.JButton();
+        laivanupotusNappi18 = new javax.swing.JButton();
+        laivanupotusNappi19 = new javax.swing.JButton();
+        laivanupotusNappi20 = new javax.swing.JButton();
+        laivanupotusNappi21 = new javax.swing.JButton();
+        laivanupotusNappi22 = new javax.swing.JButton();
+        laivanupotusNappi23 = new javax.swing.JButton();
+        laivanupotusNappi24 = new javax.swing.JButton();
+        laivanupotusNappi25 = new javax.swing.JButton();
+        upotettavaKentta = new javax.swing.JLabel();
         lopetaPaneeli = new javax.swing.JPanel();
         lopetaNappi = new javax.swing.JButton();
         valitsePaneeli = new javax.swing.JPanel();
@@ -2048,7 +2356,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(okNappi))
                     .addComponent(jLabel2))
-                .addContainerGap(189, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ylaPaneeliLayout.setVerticalGroup(
             ylaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3191,7 +3499,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                                 .addComponent(piilosanaVastaaNappi)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(piilosanaUudelleenNappi)))))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         piilosanaPaneeliLayout.setVerticalGroup(
             piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3332,6 +3640,287 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
 
         laivanupotusPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 51), 1, true));
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        laivanupotusOtsikko.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        laivanupotusOtsikko.setText("Laivanupotus");
+
+        laivanupotusNappi1.setText("1");
+        laivanupotusNappi1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi1ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi2.setText("1");
+        laivanupotusNappi2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi2ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi3.setText("1");
+        laivanupotusNappi3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi3ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi4.setText("1");
+        laivanupotusNappi4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi4ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi5.setText("1");
+        laivanupotusNappi5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi5ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi6.setText("1");
+        laivanupotusNappi6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi6ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi7.setText("1");
+        laivanupotusNappi7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi7ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi8.setText("1");
+        laivanupotusNappi8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi8ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi9.setText("1");
+        laivanupotusNappi9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi9ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi10.setText("1");
+        laivanupotusNappi10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi10ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi11.setText("1");
+        laivanupotusNappi11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi11ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi12.setText("1");
+        laivanupotusNappi12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi12ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi13.setText("1");
+        laivanupotusNappi13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi13ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi14.setText("1");
+        laivanupotusNappi14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi14ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi15.setText("1");
+        laivanupotusNappi15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi15ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi16.setText("1");
+        laivanupotusNappi16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi16ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi17.setText("1");
+        laivanupotusNappi17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi17ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi18.setText("1");
+        laivanupotusNappi18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi18ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi19.setText("1");
+        laivanupotusNappi19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi19ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi20.setText("1");
+        laivanupotusNappi20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi20ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi21.setText("1");
+        laivanupotusNappi21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi21ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi22.setText("1");
+        laivanupotusNappi22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi22ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi23.setText("1");
+        laivanupotusNappi23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi23ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi24.setText("1");
+        laivanupotusNappi24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi24ActionPerformed(evt);
+            }
+        });
+
+        laivanupotusNappi25.setText("1");
+        laivanupotusNappi25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laivanupotusNappi25ActionPerformed(evt);
+            }
+        });
+
+        upotettavaKentta.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        upotettavaKentta.setText("upotettava");
+
+        javax.swing.GroupLayout laivanupotusPaneeliLayout = new javax.swing.GroupLayout(laivanupotusPaneeli);
+        laivanupotusPaneeli.setLayout(laivanupotusPaneeliLayout);
+        laivanupotusPaneeliLayout.setHorizontalGroup(
+            laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(laivanupotusPaneeliLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(laivanupotusPaneeliLayout.createSequentialGroup()
+                        .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(laivanupotusNappi1)
+                            .addComponent(laivanupotusNappi6)
+                            .addComponent(laivanupotusNappi11)
+                            .addComponent(laivanupotusNappi16)
+                            .addComponent(laivanupotusNappi21))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(laivanupotusNappi2)
+                            .addComponent(laivanupotusNappi7)
+                            .addComponent(laivanupotusNappi12)
+                            .addComponent(laivanupotusNappi17)
+                            .addComponent(laivanupotusNappi22))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(laivanupotusNappi3)
+                            .addComponent(laivanupotusNappi8)
+                            .addComponent(laivanupotusNappi13)
+                            .addComponent(laivanupotusNappi18)
+                            .addComponent(laivanupotusNappi23))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(laivanupotusNappi4)
+                            .addComponent(laivanupotusNappi9)
+                            .addComponent(laivanupotusNappi14)
+                            .addComponent(laivanupotusNappi19)
+                            .addComponent(laivanupotusNappi24))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(laivanupotusNappi5)
+                            .addComponent(laivanupotusNappi10)
+                            .addComponent(laivanupotusNappi15)
+                            .addComponent(laivanupotusNappi20)
+                            .addComponent(laivanupotusNappi25))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(upotettavaKentta)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(laivanupotusPaneeliLayout.createSequentialGroup()
+                        .addComponent(laivanupotusOtsikko)
+                        .addGap(365, 365, 365)))
+                .addContainerGap())
+        );
+        laivanupotusPaneeliLayout.setVerticalGroup(
+            laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(laivanupotusPaneeliLayout.createSequentialGroup()
+                .addComponent(laivanupotusOtsikko)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(laivanupotusNappi1)
+                    .addComponent(laivanupotusNappi2)
+                    .addComponent(laivanupotusNappi3)
+                    .addComponent(laivanupotusNappi4)
+                    .addComponent(laivanupotusNappi5)
+                    .addComponent(upotettavaKentta))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(laivanupotusNappi6)
+                    .addComponent(laivanupotusNappi7)
+                    .addComponent(laivanupotusNappi8)
+                    .addComponent(laivanupotusNappi9)
+                    .addComponent(laivanupotusNappi10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(laivanupotusNappi11)
+                    .addComponent(laivanupotusNappi12)
+                    .addComponent(laivanupotusNappi13)
+                    .addComponent(laivanupotusNappi14)
+                    .addComponent(laivanupotusNappi15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(laivanupotusNappi16)
+                    .addComponent(laivanupotusNappi17)
+                    .addComponent(laivanupotusNappi18)
+                    .addComponent(laivanupotusNappi19)
+                    .addComponent(laivanupotusNappi20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(laivanupotusNappi21)
+                    .addComponent(laivanupotusNappi22)
+                    .addComponent(laivanupotusNappi23)
+                    .addComponent(laivanupotusNappi24)
+                    .addComponent(laivanupotusNappi25))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
         lopetaPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 0, 0), 1, true));
 
         lopetaNappi.setText("Lopeta");
@@ -3391,10 +3980,10 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                     .addComponent(ylaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(anagrammiPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(piilosanaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(laivanupotusPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lopetaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, 569, Short.MAX_VALUE)
-                    .addComponent(valitsePaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(511, Short.MAX_VALUE))
+                    .addComponent(lopetaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(valitsePaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(laivanupotusPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(557, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3836,6 +4425,106 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         // TODO add your handling code here:
     }//GEN-LAST:event_piilosanaUudelleenNappiActionPerformed
 
+    private void laivanupotusNappi1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi1ActionPerformed
+
+    private void laivanupotusNappi2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi2ActionPerformed
+
+    private void laivanupotusNappi3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi3ActionPerformed
+
+    private void laivanupotusNappi4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi4ActionPerformed
+
+    private void laivanupotusNappi5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi5ActionPerformed
+
+    private void laivanupotusNappi6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi6ActionPerformed
+
+    private void laivanupotusNappi7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi7ActionPerformed
+
+    private void laivanupotusNappi8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi8ActionPerformed
+
+    private void laivanupotusNappi9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi9ActionPerformed
+
+    private void laivanupotusNappi10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi10ActionPerformed
+
+    private void laivanupotusNappi11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi11ActionPerformed
+
+    private void laivanupotusNappi12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi12ActionPerformed
+
+    private void laivanupotusNappi13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi13ActionPerformed
+
+    private void laivanupotusNappi14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi14ActionPerformed
+
+    private void laivanupotusNappi15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi15ActionPerformed
+
+    private void laivanupotusNappi16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi16ActionPerformed
+
+    private void laivanupotusNappi17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi17ActionPerformed
+
+    private void laivanupotusNappi18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi18ActionPerformed
+
+    private void laivanupotusNappi19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi19ActionPerformed
+
+    private void laivanupotusNappi20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi20ActionPerformed
+
+    private void laivanupotusNappi21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi21ActionPerformed
+
+    private void laivanupotusNappi22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi22ActionPerformed
+
+    private void laivanupotusNappi23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi23ActionPerformed
+
+    private void laivanupotusNappi24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi24ActionPerformed
+
+    private void laivanupotusNappi25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laivanupotusNappi25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_laivanupotusNappi25ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3883,8 +4572,36 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     private javax.swing.JLabel annaNimi;
     private javax.swing.JLabel etsittava;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton laivanupotusNappi;
+    private javax.swing.JButton laivanupotusNappi1;
+    private javax.swing.JButton laivanupotusNappi10;
+    private javax.swing.JButton laivanupotusNappi11;
+    private javax.swing.JButton laivanupotusNappi12;
+    private javax.swing.JButton laivanupotusNappi13;
+    private javax.swing.JButton laivanupotusNappi14;
+    private javax.swing.JButton laivanupotusNappi15;
+    private javax.swing.JButton laivanupotusNappi16;
+    private javax.swing.JButton laivanupotusNappi17;
+    private javax.swing.JButton laivanupotusNappi18;
+    private javax.swing.JButton laivanupotusNappi19;
+    private javax.swing.JButton laivanupotusNappi2;
+    private javax.swing.JButton laivanupotusNappi20;
+    private javax.swing.JButton laivanupotusNappi21;
+    private javax.swing.JButton laivanupotusNappi22;
+    private javax.swing.JButton laivanupotusNappi23;
+    private javax.swing.JButton laivanupotusNappi24;
+    private javax.swing.JButton laivanupotusNappi25;
+    private javax.swing.JButton laivanupotusNappi3;
+    private javax.swing.JButton laivanupotusNappi4;
+    private javax.swing.JButton laivanupotusNappi5;
+    private javax.swing.JButton laivanupotusNappi6;
+    private javax.swing.JButton laivanupotusNappi7;
+    private javax.swing.JButton laivanupotusNappi8;
+    private javax.swing.JButton laivanupotusNappi9;
+    private javax.swing.JLabel laivanupotusOtsikko;
     private javax.swing.JPanel laivanupotusPaneeli;
     private javax.swing.JButton lopetaNappi;
     private javax.swing.JPanel lopetaPaneeli;
@@ -3998,6 +4715,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     private javax.swing.JButton piilosanaVastaaNappi;
     private javax.swing.JLabel piilosanaVastausKentta;
     private javax.swing.JLabel tuomioKentta;
+    private javax.swing.JLabel upotettavaKentta;
     private javax.swing.JButton uudelleenNappi;
     private javax.swing.JLabel valitse;
     private javax.swing.JPanel valitsePaneeli;
