@@ -65,7 +65,6 @@ public class Laivanupotus {
     public static void tyhjennaKaikki() {
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
-
                 taulukko[i][j] = 0;
             }
         }
@@ -84,7 +83,6 @@ public class Laivanupotus {
 
     private static char satunnainenMerkki() {
         final String aakkoset = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
-
         Random r = new Random();
         final int pituus = aakkoset.length();
         return aakkoset.charAt(r.nextInt(pituus));

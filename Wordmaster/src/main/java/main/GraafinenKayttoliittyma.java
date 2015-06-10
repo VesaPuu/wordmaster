@@ -40,6 +40,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         anagrammiKentta.setText("");
         upotettavaKentta.setText("");
         klikkaukset.setText("");
+        osumat.setText("");
         pelaajanNimi.addActionListener(this);
         vastaaNappi.addActionListener(this);
         vastaus.addActionListener(this);
@@ -177,6 +178,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         okNappi.addActionListener(this);
         piilosanaVastaaNappi.addActionListener(this);
         piilosanaUudelleenNappi.addActionListener(this);
+        laivanupotusUudelleen.addActionListener(this);
         this.tl = new TiedostonLukija(); // luodaan uusi Tiedostonlukija-olio
         tl.lueTiedosto();
         this.piilosana = new Piilosana();
@@ -575,12 +577,14 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         laivanupotus.tyhjennaKaikki();
         upotettavaSana = "";
         laivanupotusKlikkaus = 0;
+        laivanupotusOsuma = 0;
         klikkaukset.setText("Arvauksia: " + laivanupotusKlikkaus);
+        osumat.setText("Osumia: " + laivanupotusOsuma);
 //        piilosanaVastaus = "";
 //        etsittavaSana = "";
 //        piilosanaVastausKentta.setText("Vastaus: ");
-//        Sana upotettava = tl.sanasto.luoRandomSana();
-        Sana upotettava = new Sana("kissa");
+        Sana upotettava = tl.sanasto.luoRandomSana();
+//        Sana upotettava = new Sana("kissa");
         laivanupotus.sijoitaSana(upotettava);
 //        piilosana.taytaKaikki();
         upotettavaSana = upotettava.getSana();
@@ -747,6 +751,10 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 etsittava.setText("Yritä vielä! Sana oli " + etsittavaSana);
             }
 //            repaint();
+        }
+
+        if (e.getSource().equals(laivanupotusUudelleen)) {
+            aloitaLaivanupotus();
         }
 
         if (e.getSource().equals(nappi0101)) {
@@ -1860,6 +1868,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi1.setText(laivanupotus.palautaMerkki(0, 0));
                 if (!laivanupotus.onkoTyhja(0, 0)) {
                     laivanupotusNappi1.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi1.setBackground(Color.BLACK);
@@ -1874,6 +1884,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi2.setText(laivanupotus.palautaMerkki(0, 1));
                 if (!laivanupotus.onkoTyhja(0, 1)) {
                     laivanupotusNappi2.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi2.setBackground(Color.BLACK);
@@ -1888,6 +1900,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi3.setText(laivanupotus.palautaMerkki(0, 2));
                 if (!laivanupotus.onkoTyhja(0, 2)) {
                     laivanupotusNappi3.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi3.setBackground(Color.BLACK);
@@ -1902,6 +1916,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi4.setText(laivanupotus.palautaMerkki(0, 3));
                 if (!laivanupotus.onkoTyhja(0, 3)) {
                     laivanupotusNappi4.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi4.setBackground(Color.BLACK);
@@ -1916,6 +1932,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi5.setText(laivanupotus.palautaMerkki(0, 4));
                 if (!laivanupotus.onkoTyhja(0, 4)) {
                     laivanupotusNappi5.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi5.setBackground(Color.BLACK);
@@ -1930,6 +1948,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi6.setText(laivanupotus.palautaMerkki(1, 0));
                 if (!laivanupotus.onkoTyhja(1, 0)) {
                     laivanupotusNappi6.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi6.setBackground(Color.BLACK);
@@ -1944,6 +1964,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi7.setText(laivanupotus.palautaMerkki(1, 1));
                 if (!laivanupotus.onkoTyhja(1, 1)) {
                     laivanupotusNappi7.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi7.setBackground(Color.BLACK);
@@ -1958,6 +1980,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi8.setText(laivanupotus.palautaMerkki(1, 2));
                 if (!laivanupotus.onkoTyhja(1, 2)) {
                     laivanupotusNappi8.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi8.setBackground(Color.BLACK);
@@ -1972,6 +1996,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi9.setText(laivanupotus.palautaMerkki(1, 3));
                 if (!laivanupotus.onkoTyhja(1, 3)) {
                     laivanupotusNappi9.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi9.setBackground(Color.BLACK);
@@ -1986,6 +2012,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi10.setText(laivanupotus.palautaMerkki(1, 4));
                 if (!laivanupotus.onkoTyhja(1, 4)) {
                     laivanupotusNappi10.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi10.setBackground(Color.BLACK);
@@ -2000,6 +2028,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi11.setText(laivanupotus.palautaMerkki(2, 0));
                 if (!laivanupotus.onkoTyhja(2, 0)) {
                     laivanupotusNappi11.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi11.setBackground(Color.BLACK);
@@ -2014,6 +2044,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi12.setText(laivanupotus.palautaMerkki(2, 1));
                 if (!laivanupotus.onkoTyhja(2, 1)) {
                     laivanupotusNappi12.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi12.setBackground(Color.BLACK);
@@ -2028,6 +2060,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi13.setText(laivanupotus.palautaMerkki(2, 2));
                 if (!laivanupotus.onkoTyhja(2, 2)) {
                     laivanupotusNappi13.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi13.setBackground(Color.BLACK);
@@ -2042,6 +2076,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi14.setText(laivanupotus.palautaMerkki(2, 3));
                 if (!laivanupotus.onkoTyhja(2, 3)) {
                     laivanupotusNappi14.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi14.setBackground(Color.BLACK);
@@ -2056,6 +2092,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi15.setText(laivanupotus.palautaMerkki(2, 4));
                 if (!laivanupotus.onkoTyhja(2, 4)) {
                     laivanupotusNappi15.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi15.setBackground(Color.BLACK);
@@ -2070,6 +2108,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi16.setText(laivanupotus.palautaMerkki(3, 0));
                 if (!laivanupotus.onkoTyhja(3, 0)) {
                     laivanupotusNappi16.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi16.setBackground(Color.BLACK);
@@ -2084,6 +2124,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi17.setText(laivanupotus.palautaMerkki(3, 1));
                 if (!laivanupotus.onkoTyhja(3, 1)) {
                     laivanupotusNappi17.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi17.setBackground(Color.BLACK);
@@ -2098,6 +2140,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi18.setText(laivanupotus.palautaMerkki(3, 2));
                 if (!laivanupotus.onkoTyhja(3, 2)) {
                     laivanupotusNappi18.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi18.setBackground(Color.BLACK);
@@ -2112,6 +2156,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi19.setText(laivanupotus.palautaMerkki(3, 3));
                 if (!laivanupotus.onkoTyhja(3, 3)) {
                     laivanupotusNappi19.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi19.setBackground(Color.BLACK);
@@ -2126,6 +2172,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi20.setText(laivanupotus.palautaMerkki(3, 4));
                 if (!laivanupotus.onkoTyhja(3, 4)) {
                     laivanupotusNappi20.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi20.setBackground(Color.BLACK);
@@ -2140,6 +2188,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi21.setText(laivanupotus.palautaMerkki(4, 0));
                 if (!laivanupotus.onkoTyhja(4, 0)) {
                     laivanupotusNappi21.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi21.setBackground(Color.BLACK);
@@ -2154,6 +2204,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi22.setText(laivanupotus.palautaMerkki(4, 1));
                 if (!laivanupotus.onkoTyhja(4, 1)) {
                     laivanupotusNappi22.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi22.setBackground(Color.BLACK);
@@ -2168,6 +2220,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi23.setText(laivanupotus.palautaMerkki(4, 2));
                 if (!laivanupotus.onkoTyhja(4, 2)) {
                     laivanupotusNappi23.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi23.setBackground(Color.BLACK);
@@ -2182,6 +2236,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi24.setText(laivanupotus.palautaMerkki(4, 3));
                 if (!laivanupotus.onkoTyhja(4, 3)) {
                     laivanupotusNappi24.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi24.setBackground(Color.BLACK);
@@ -2196,6 +2252,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 laivanupotusNappi25.setText(laivanupotus.palautaMerkki(4, 4));
                 if (!laivanupotus.onkoTyhja(4, 4)) {
                     laivanupotusNappi25.setBackground(Color.GREEN);
+                    laivanupotusOsuma++;
+                    osumat.setText("Osumia: " + laivanupotusOsuma);
                 }
             } else {//
                 laivanupotusNappi25.setBackground(Color.BLACK);
@@ -2367,6 +2425,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         laivanupotusNappi25 = new javax.swing.JButton();
         upotettavaKentta = new javax.swing.JLabel();
         klikkaukset = new javax.swing.JLabel();
+        osumat = new javax.swing.JLabel();
+        laivanupotusUudelleen = new javax.swing.JButton();
         lopetaPaneeli = new javax.swing.JPanel();
         lopetaNappi = new javax.swing.JButton();
         valitsePaneeli = new javax.swing.JPanel();
@@ -2377,6 +2437,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        anagrammiPaneeli.setBackground(new java.awt.Color(204, 255, 255));
         anagrammiPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 1, true));
 
         anagrammiOtsikko.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -2454,6 +2515,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
+        ylaPaneeli.setBackground(new java.awt.Color(204, 204, 255));
         ylaPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 255), 1, true));
 
         annaNimi.setText("Anna nimesi: ");
@@ -2505,17 +2567,22 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 .addGap(74, 74, 74))
         );
 
+        piilosanaPaneeli.setBackground(new java.awt.Color(255, 222, 252));
         piilosanaPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 102, 0), 1, true));
 
         piilosanaOtsikko.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         piilosanaOtsikko.setText("Etsi piilosana");
 
         piilosanaOhje.setEditable(false);
+        piilosanaOhje.setBackground(new java.awt.Color(204, 204, 255));
         piilosanaOhje.setColumns(20);
         piilosanaOhje.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         piilosanaOhje.setRows(4);
-        piilosanaOhje.setText("Etsi taulukosta seuraava sana.\nSanan perättäiset kirjaimet voivat olla toisiina nähden missä tahansa suunnassa\n(ylhäällä, alhaalla, vieressä, kulmittain).\nVoit perua kirjaimen lisäyksen painamalla nappia uudestaan.\n");
+        piilosanaOhje.setText("Etsi taulukosta seuraava sana.\nSanan perättäiset kirjaimet voivat olla toisiinsa nähden missä suunnassa tahansa \n(ylhäällä, alhaalla, vieressä, kulmittain).\nVoit perua kirjaimen lisäyksen painamalla nappia uudestaan.\n");
         piilosanaOhje.setAutoscrolls(false);
+        piilosanaOhje.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        piilosanaOhje.setCaretColor(new java.awt.Color(51, 255, 51));
+        piilosanaOhje.setOpaque(false);
         jScrollPane2.setViewportView(piilosanaOhje);
 
         nappi0101.setFont(new java.awt.Font("Consolas", 1, 13)); // NOI18N
@@ -3633,7 +3700,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                                 .addComponent(piilosanaVastaaNappi)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(piilosanaUudelleenNappi)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         piilosanaPaneeliLayout.setVerticalGroup(
             piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3641,8 +3708,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 .addGap(5, 5, 5)
                 .addComponent(piilosanaOtsikko)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(etsittava)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(piilosanaPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3772,10 +3839,14 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        laivanupotusPaneeli.setBackground(new java.awt.Color(227, 230, 251));
         laivanupotusPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 51), 1, true));
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
+        jTextArea1.setText("Yritä löytää alla oleva sana mahdollisimman vähillä klikkauksilla.\nSanan perättäiset kirjaimet voivat olla toisiinsa nähden missä suunnassa tahansa\n(ylhäällä, alhaalla, vieressä, kulmittain).\n");
+        jTextArea1.setOpaque(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         laivanupotusOtsikko.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -3961,6 +4032,10 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
 
         klikkaukset.setText("Klikkauksia:");
 
+        osumat.setText("Osumia: ");
+
+        laivanupotusUudelleen.setText("Uudelleen");
+
         javax.swing.GroupLayout laivanupotusPaneeliLayout = new javax.swing.GroupLayout(laivanupotusPaneeli);
         laivanupotusPaneeli.setLayout(laivanupotusPaneeliLayout);
         laivanupotusPaneeliLayout.setHorizontalGroup(
@@ -4007,7 +4082,9 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(upotettavaKentta)
-                            .addComponent(klikkaukset))
+                            .addComponent(klikkaukset)
+                            .addComponent(osumat)
+                            .addComponent(laivanupotusUudelleen))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(laivanupotusPaneeliLayout.createSequentialGroup()
                         .addComponent(laivanupotusOtsikko)
@@ -4019,7 +4096,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             .addGroup(laivanupotusPaneeliLayout.createSequentialGroup()
                 .addComponent(laivanupotusOtsikko)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(laivanupotusNappi1)
@@ -4042,7 +4119,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                     .addComponent(laivanupotusNappi12)
                     .addComponent(laivanupotusNappi13)
                     .addComponent(laivanupotusNappi14)
-                    .addComponent(laivanupotusNappi15))
+                    .addComponent(laivanupotusNappi15)
+                    .addComponent(osumat))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(laivanupotusPaneeliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(laivanupotusNappi16)
@@ -4056,16 +4134,19 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
                     .addComponent(laivanupotusNappi22)
                     .addComponent(laivanupotusNappi23)
                     .addComponent(laivanupotusNappi24)
-                    .addComponent(laivanupotusNappi25))
+                    .addComponent(laivanupotusNappi25)
+                    .addComponent(laivanupotusUudelleen))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
+        lopetaPaneeli.setBackground(new java.awt.Color(255, 204, 153));
         lopetaPaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 0, 0), 1, true));
 
         lopetaNappi.setText("Lopeta");
         lopetaPaneeli.add(lopetaNappi);
 
-        valitsePaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 0), 1, true));
+        valitsePaneeli.setBackground(new java.awt.Color(204, 255, 204));
+        valitsePaneeli.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 102), 1, true));
 
         valitse.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         valitse.setText("Valitse peli");
@@ -4114,15 +4195,12 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ylaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(anagrammiPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(piilosanaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lopetaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(valitsePaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(laivanupotusPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(557, Short.MAX_VALUE))
+            .addComponent(ylaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(anagrammiPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(piilosanaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lopetaPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(laivanupotusPaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(valitsePaneeli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4743,6 +4821,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     private javax.swing.JButton laivanupotusNappi9;
     private javax.swing.JLabel laivanupotusOtsikko;
     private javax.swing.JPanel laivanupotusPaneeli;
+    private javax.swing.JButton laivanupotusUudelleen;
     private javax.swing.JButton lopetaNappi;
     private javax.swing.JPanel lopetaPaneeli;
     private javax.swing.JButton nappi0101;
@@ -4846,6 +4925,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
     private javax.swing.JButton nappi1009;
     private javax.swing.JButton nappi1010;
     private javax.swing.JButton okNappi;
+    private javax.swing.JLabel osumat;
     private javax.swing.JTextField pelaajanNimi;
     private javax.swing.JButton piilosanaNappi;
     private javax.swing.JTextArea piilosanaOhje;
