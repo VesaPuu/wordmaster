@@ -1970,7 +1970,10 @@
                               <Component id="laivanupotusNappi25" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="upotettavaKentta" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="upotettavaKentta" min="-2" max="-2" attributes="0"/>
+                              <Component id="klikkaukset" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
@@ -2004,6 +2007,7 @@
                       <Component id="laivanupotusNappi8" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="laivanupotusNappi9" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="laivanupotusNappi10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="klikkaukset" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -2264,6 +2268,11 @@
               <Font name="Tahoma" size="18" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="upotettava"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="klikkaukset">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Klikkauksia:"/>
           </Properties>
         </Component>
       </SubComponents>
