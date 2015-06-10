@@ -83,3 +83,12 @@
 6.6. 1,5 h
 
 - Piilosana-pelin koodaamista (vastaa-toiminto ja vastauksen tarkistus, Piilosana-luokkaan lisätty metodeja)
+
+9.6. 3,5 h
+
+- luokkia ja metodeja karsittu
+ 
+10.6. 2 h
+
+- Laivanupotus-pelin ensimmäinen versio tehty
+
