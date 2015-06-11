@@ -101,5 +101,4 @@
 
 - sekvenssikaaviot eri pelit aloittavista metodeista
 - luokkakaavio päivitetty
-- Javadoc-kuvauksia täydennetty
-- 
+- Javadoc-kuvauksia täydennetty- 
