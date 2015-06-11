@@ -14,8 +14,18 @@ public class PelaajaTest {
     }
 
     @Test
-    public void testGetPisteet() {
-        assertEquals(p.getPisteet(), 0);
+    public void testGetAnagrammiPisteet() {
+        assertEquals(p.getAnagrammiPisteet(), 0);
+    }
+
+    @Test
+    public void testGetPiilosanaPisteet() {
+        assertEquals(p.getPiilosanaPisteet(), 0);
+    }
+
+    @Test
+    public void testGetLaivanupotusPisteet() {
+        assertEquals(p.getLaivanupotusPisteet(), 0);
     }
 
     @Test
@@ -24,14 +34,47 @@ public class PelaajaTest {
     }
 
     @Test
-    public void testSetPisteet() {
-        assertEquals(p.setPisteet(5), true);
-        assertEquals(p.getPisteet(), 5);
+    public void testSetAnagrammiPisteet() {
+        assertEquals(p.setAnagrammiPisteet(5), true);
+        assertEquals(p.getAnagrammiPisteet(), 5);
+    }
+
+    @Test
+    public void testSetPiilosanaPisteet() {
+        assertEquals(p.setPiilosanaPisteet(5), true);
+        assertEquals(p.getPiilosanaPisteet(), 5);
+    }
+
+    @Test
+    public void testSetLaivanupotusPisteet() {
+        assertEquals(p.setLaivanupotusPisteet(5), true);
+        assertEquals(p.getLaivanupotusPisteet(), 5);
+    }
+
+    @Test
+    public void testLisaaAnagrammiPisteet() {
+        p.lisaaAnagrammiPisteet(10);
+        p.lisaaAnagrammiPisteet(5);
+        assertEquals(p.getAnagrammiPisteet(), 15);
+    }
+
+    @Test
+    public void testLisaaPiilosanaPisteet() {
+        p.lisaaPiilosanaPisteet(10);
+        p.lisaaPiilosanaPisteet(5);
+        assertEquals(p.getPiilosanaPisteet(), 15);
+    }
+
+    @Test
+    public void testLisaaLaivanupotusPisteet() {
+        p.lisaaLaivanupotusPisteet(10);
+        p.lisaaLaivanupotusPisteet(5);
+        assertEquals(p.getLaivanupotusPisteet(), 15);
     }
 
     @Test
     public void testToString() {
-        assertEquals(p.toString(), "Heikki, 0");
+        assertEquals(p.toString(), "Heikki, 0, 0, 0");
     }
 
 }

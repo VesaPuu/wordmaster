@@ -64,6 +64,22 @@ public class PiilosanaTest {
     }
 
     @Test
+    public void testTyhjennaKaikki() {
+        Piilosana p = new Piilosana();
+        p.taytaKaikki();
+        p.tyhjennaKaikki();
+        assertEquals(true, p.onkoTyhja(0, 0));
+    }
+
+    @Test
+    public void testTaytaKaikki() {
+        Piilosana p = new Piilosana();
+        p.tyhjennaKaikki();
+        p.taytaKaikki();
+        assertEquals(false, p.onkoTyhja(0, 0));
+    }
+
+    @Test
     public void testSijoitaSana() {
         Piilosana p = new Piilosana();
         Sana kissa = new Sana("kissa");

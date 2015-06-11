@@ -63,7 +63,6 @@ public class Sanasto {
             otos.add(kopio.get(r));
             kopio.remove(r);
         }
-        System.out.println(otos);
         return true;
     }
 

@@ -684,7 +684,7 @@
                   <Font name="Tahoma" size="13" style="0"/>
                 </Property>
                 <Property name="rows" type="int" value="4"/>
-                <Property name="text" type="java.lang.String" value="Etsi taulukosta seuraava sana.&#xa;Sanan per&#xe4;tt&#xe4;iset kirjaimet voivat olla toisiinsa n&#xe4;hden miss&#xe4; suunnassa tahansa &#xa;(ylh&#xe4;&#xe4;ll&#xe4;, alhaalla, vieress&#xe4;, kulmittain).&#xa;Voit perua kirjaimen lis&#xe4;yksen painamalla nappia uudestaan.&#xa;"/>
+                <Property name="text" type="java.lang.String" value="Etsi alla oleva sana. Klikkaa sanan kirjaimia oikeassa j&#xe4;rjestyksess&#xe4;.&#xa;Sanan per&#xe4;tt&#xe4;iset kirjaimet voivat olla toisiinsa n&#xe4;hden miss&#xe4; suunnassa tahansa &#xa;(ylh&#xe4;&#xe4;ll&#xe4;, alhaalla, vieress&#xe4;, kulmittain).&#xa;Voit perua kirjaimen lis&#xe4;yksen painamalla nappia uudestaan.&#xa;"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -1994,6 +1994,7 @@
                               <Component id="klikkaukset" min="-2" max="-2" attributes="0"/>
                               <Component id="osumat" min="-2" max="-2" attributes="0"/>
                               <Component id="laivanupotusUudelleen" min="-2" max="-2" attributes="0"/>
+                              <Component id="laivanupotusPisteetKentta" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -2046,6 +2047,7 @@
                       <Component id="laivanupotusNappi18" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="laivanupotusNappi19" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="laivanupotusNappi20" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusPisteetKentta" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -2076,7 +2078,7 @@
                   <Font name="Tahoma" size="13" style="0"/>
                 </Property>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="Yrit&#xe4; l&#xf6;yt&#xe4;&#xe4; alla oleva sana mahdollisimman v&#xe4;hill&#xe4; klikkauksilla.&#xa;Sanan per&#xe4;tt&#xe4;iset kirjaimet voivat olla toisiinsa n&#xe4;hden miss&#xe4; suunnassa tahansa&#xa;(ylh&#xe4;&#xe4;ll&#xe4;, alhaalla, vieress&#xe4;, kulmittain).&#xa;"/>
+                <Property name="text" type="java.lang.String" value="Etsi alla olevan sanan kirjaimet mahdollisimman v&#xe4;hill&#xe4; klikkauksilla.&#xa;Sanan per&#xe4;tt&#xe4;iset kirjaimet voivat olla toisiinsa n&#xe4;hden miss&#xe4; suunnassa tahansa&#xa;(ylh&#xe4;&#xe4;ll&#xe4;, alhaalla, vieress&#xe4;, kulmittain).&#xa;"/>
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>
             </Component>
@@ -2311,6 +2313,11 @@
         <Component class="javax.swing.JButton" name="laivanupotusUudelleen">
           <Properties>
             <Property name="text" type="java.lang.String" value="Uudelleen"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="laivanupotusPisteetKentta">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pisteet:"/>
           </Properties>
         </Component>
       </SubComponents>
