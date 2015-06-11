@@ -3,11 +3,17 @@
 
 **Aihe:** Sanapeli. 
 
-Pelissä pelaaja ratkaisee ohjelman antaman sanatehtävän tai tehtäviä. Tavoitteena on joko ratkaista tehtävä mahdollisimman nopeasti tai pyrkiä mahdollisimman hyvään suoritukseen ilman aikarajaa.
+Pelissä pelaaja ratkaisee ohjelman antaman sanatehtävän tai tehtäviä. Sanojen lähteenä on Kotimaisten kielten  keskuksen sivuilta löytyvä nykysuomen sanalista, jota on tähän tarkoitukseen hieman karsittu ja jätetty mm. yli 10 merkkiä pitkät sanat pois.
 
-Perusideana pelissä on etsiä suomen kielen sanoja kaksiulotteisesta ruudukosta, jonka koko on esimerkiksi 10 x 10. Wordbase-pelin tapaan sanojen perättäiset kirjaimet voivat olla missä tahansa suunnassa vierekkäisissä ruuduissa: vieressä, ylä- tai alapuolella tai kulmittain.
+Tavoitteena pelissä on joko ratkaista tehtävät mahdollisimman nopeasti tai pyrkiä mahdollisimman hyvään suoritukseen ilman aikarajaa.
 
-Pelin alkaessa pelaajalle näytetään kirjaimin täytetty ruudukko, johon on sijoitettu suomen kielen sanoja sekä merkityksettömiä kirjaimia. Lähteenä käytetään Kotimaisten kielten  keskuksen sivuilta löytyvää nykysuomen sanalistaa.
+Pelin alkaessa pelaajalta kysytään nimeä tai nimimerkkiä ja kysytään, mitä kolmesta pelivaihtoehdosta hän haluaa pelata.
+
+Anagrammi-pelissä pelaajan täytyy ratkaista, minkä sanan anagrammi on kyseessä. Pelaajaa voi pyytää vihjeitä, ts. sanan seuraavia kirjaimia yksi kerrallaan.
+
+Piilosana-pelissä pelaajalle näytetään kirjaimin täytetty ruudukko, kooltaan 10 x 10, johon on sijoitettu yksi suomen kielen sana sekä merkityksettömiä kirjaimia. Etsittävän sanan perättäiset kirjaimet voivat olla missä tahansa suunnassa vierekkäisissä ruuduissa: vieressä, ylä- tai alapuolella tai kulmittain.
+
+Laivanupotus-pelissä käytetään 5 x 5 -kokoista ruudukkoa, johon on piilotettu yksi sana. Aluksi ruudukon solut ovat mustia, ja niitä klikkaamalla paljastuu, onko solussa kirjain vai ei. Tavoitteena on löytää piilotettu sana mahdollisimman vähillä klikkauksilla. 
 
 Pelivaihtoehtoja voisivat olla seuraavat:
 
@@ -17,17 +23,13 @@ Pelivaihtoehtoja voisivat olla seuraavat:
 
 - Laivanupotus-moodissa ruudukon kirjaimet on peitetty, ja pelaajan tehtävänä on löytää sieltä annetut sanat. Ohjelma paljastaa ruudukon kirjaimia yksi kerrallaan pelaajan antamien koordinaattien mukaan.
 
-- Anagrammi-moodissa ohjelman antamassa listassa sanat ovat anagrammeja.
-
-
 **Käyttäjät:** Pelaaja (yksi kerrallaan).
 
 **Käyttäjän toiminnot:**
 
 Pelaaja voi aloittaa uuden pelin joko nimettömänä tai antamalla jonkin nimimerkin.
 
-Pelaaja voi pyytää vihjeitä.
+Pelaaja voi valita kolmesta pelivaihtoehdosta.
 
-Pelaaja voi pyytää näyttämään ratkaisun.
+Pelin päätyttyä pelaaja voi aloittaa pelin uudelleen tai siirtyä pelaamaan jotain muuta pelivaihtoehtoa.
 
-Peli muistaa nimimerkin aiemmat tulokset.
