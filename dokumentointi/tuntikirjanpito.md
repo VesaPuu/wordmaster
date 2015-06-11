@@ -91,4 +91,9 @@
 10.6. 2 h
 
 - Laivanupotus-pelin ensimmäinen versio tehty
+ 
+10.6. 4 h
+
+- Laivanupotus-pelin ja siihen liittyvien testien koodaamista
+- Käyttöliittymän ulkoasun virittelyä
 
