@@ -59,17 +59,9 @@ public class LaivanupotusTest {
     @Test
     public void testTyhjennaKaikki() {
         Laivanupotus l = new Laivanupotus();
-        l.taytaKaikki();
+        l.lisaaMerkki(0, 0, 'a');
         l.tyhjennaKaikki();
         assertEquals(true, l.onkoTyhja(0, 0));
-    }
-
-    @Test
-    public void testTaytaKaikki() {
-        Laivanupotus l = new Laivanupotus();
-        l.tyhjennaKaikki();
-        l.taytaKaikki();
-        assertEquals(false, l.onkoTyhja(0, 0));
     }
 
     @Test

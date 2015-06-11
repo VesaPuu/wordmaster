@@ -4,8 +4,6 @@ package wordmaster;
  * Pelaaja-luokan ilmentymät sisältävät tiedon pelaajan nimestä ja hänen
  * pisteistään eri peleissä. Luokan välineillä pelaajalle voidaan asettaa
  * haluttu pistemäärä.
- *
- * @author Vesa
  */
 public class Pelaaja {
 
@@ -15,6 +13,7 @@ public class Pelaaja {
     int laivanupotusPisteet;
 
     /**
+     * Konstruktori luo uuden Pelaaja-olion.
      *
      * @param nimi
      */

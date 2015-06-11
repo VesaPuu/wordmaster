@@ -4,6 +4,9 @@ import java.io.*;
 import wordmaster.Sana;
 import wordmaster.Sanasto;
 
+/**
+ *
+ */
 public class TiedostonLukija {
 
     Sanasto sanasto;
@@ -18,6 +21,8 @@ public class TiedostonLukija {
     }
 
     /**
+     * Metodi lukee txt-tiedoston, luo sen riveistä Sana-olioita ja tallentaa ne
+     * Sanasto-luokan ilmentymään.
      *
      * @return @throws Exception
      */

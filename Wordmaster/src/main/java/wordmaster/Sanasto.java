@@ -5,17 +5,17 @@ import java.util.Random;
 
 /**
  * Sanasto-luokan ilmentymän sisältämään ArrayListiin tallennetaan Sana-olioita.
- * Sanastosta voidaan palauttaa yksi satunnainen sana tai useamman sanan otos. *
+ * Sanastosta voidaan palauttaa yksi satunnainen sana tai useamman sanan otos.
  */
 public class Sanasto {
 
     /**
-     *
+     * Pelissä käytettävä aineisto tallennetaan Sana-olioina tähän listaan
      */
     public static ArrayList sanat;
 
     /**
-     * Pelissä käytettävä aineisto tallennetaan Sana-olioina tähän listaan
+     *
      */
     static Random random;
 

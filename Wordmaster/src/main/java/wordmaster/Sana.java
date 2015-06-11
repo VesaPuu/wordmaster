@@ -9,6 +9,7 @@ public class Sana {
     static int pituus;
 
     /**
+     * Konstruktori luo Sana-olion parametriksi annetusta sanasta.
      *
      * @param sana
      */
@@ -22,10 +23,6 @@ public class Sana {
         return this.pituus;
     }
 
-    /**
-     *
-     * @return
-     */
     public String getSana() {
         return this.sana;
     }
