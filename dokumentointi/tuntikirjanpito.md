@@ -97,3 +97,9 @@
 - Laivanupotus-pelin ja siihen liittyvien testien koodaamista
 - Käyttöliittymän ulkoasun virittelyä
 
+11.6. 6,5 h
+
+- sekvenssikaaviot eri pelit aloittavista metodeista
+- luokkakaavio päivitetty
+- Javadoc-kuvauksia täydennetty
+- 
