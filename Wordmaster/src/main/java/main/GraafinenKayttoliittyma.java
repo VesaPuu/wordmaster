@@ -15,9 +15,11 @@ import wordmaster.Laivanupotus;
 public class GraafinenKayttoliittyma extends javax.swing.JFrame implements ActionListener {
 
     static TiedostonLukija tl;
+    Tiedostokirjoitin kirjoitin;
     Piilosana piilosana;
     Laivanupotus laivanupotus;
     Pelaaja pelaaja;
+    Pelaajatiedot pelaajaTiedot;
     static int vihjeet;
     int sananPituus;
     int laivanupotusKlikkaus;
@@ -181,6 +183,8 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         piilosanaUudelleenNappi.addActionListener(this);
         laivanupotusUudelleen.addActionListener(this);
         this.tl = new TiedostonLukija(); // luodaan uusi Tiedostonlukija-olio
+        this.kirjoitin = new Tiedostokirjoitin();
+        this.pelaajaTiedot = new Pelaajatiedot();
         tl.lueTiedosto();
         this.piilosana = new Piilosana();
         this.laivanupotus = new Laivanupotus();
@@ -640,6 +644,10 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
 
         if (e.getSource().equals(okNappi) || aiheuttaja == pelaajanNimi) {
             this.pelaaja = new Pelaaja(pelaajanNimi.getText());
+            Pelaajatiedot.pelaajat.add(pelaaja);
+//            kirjoitin.avaa("pelaajat.txt");
+//            kirjoitin.kirjoita(pelaaja.toString());
+//            kirjoitin.sulje();
             valitsePaneeli.setVisible(true);
             aloita();
         }
@@ -722,6 +730,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             anagrammiNappi.setVisible(false);
             piilosanaNappi.setVisible(false);
             laivanupotusNappi.setVisible(false);
+            pelaajaTiedot.talteen();
             valitse.setText("Kiitos ja näkemiin!");
             repaint();
         }
@@ -748,7 +757,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0101.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0101.setBackground(Color.red);
+                nappi0101.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0102)) {
@@ -759,7 +768,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0102.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0102.setBackground(Color.red);
+                nappi0102.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0103)) {
@@ -770,7 +779,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0103.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0103.setBackground(Color.red);
+                nappi0103.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0104)) {
@@ -781,7 +790,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0104.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0104.setBackground(Color.red);
+                nappi0104.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0105)) {
@@ -792,7 +801,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0105.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0105.setBackground(Color.red);
+                nappi0105.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0106)) {
@@ -803,7 +812,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0106.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0106.setBackground(Color.red);
+                nappi0106.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0107)) {
@@ -814,7 +823,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0107.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0107.setBackground(Color.red);
+                nappi0107.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0108)) {
@@ -825,7 +834,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0108.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0108.setBackground(Color.red);
+                nappi0108.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0109)) {
@@ -836,7 +845,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0109.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0109.setBackground(Color.red);
+                nappi0109.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0110)) {
@@ -847,7 +856,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0110.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0110.setBackground(Color.red);
+                nappi0110.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0201)) {
@@ -858,7 +867,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0201.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0201.setBackground(Color.red);
+                nappi0201.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0202)) {
@@ -869,7 +878,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0202.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0202.setBackground(Color.red);
+                nappi0202.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0203)) {
@@ -880,7 +889,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0203.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0203.setBackground(Color.red);
+                nappi0203.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0204)) {
@@ -891,7 +900,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0204.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0204.setBackground(Color.red);
+                nappi0204.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0205)) {
@@ -902,7 +911,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0205.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0205.setBackground(Color.red);
+                nappi0205.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0206)) {
@@ -913,7 +922,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0206.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0206.setBackground(Color.red);
+                nappi0206.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0207)) {
@@ -924,7 +933,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0207.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0207.setBackground(Color.red);
+                nappi0207.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0208)) {
@@ -935,7 +944,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0208.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0208.setBackground(Color.red);
+                nappi0208.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0209)) {
@@ -946,7 +955,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0209.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0209.setBackground(Color.red);
+                nappi0209.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0210)) {
@@ -957,7 +966,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0210.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0210.setBackground(Color.red);
+                nappi0210.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0301)) {
@@ -968,7 +977,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0301.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0301.setBackground(Color.red);
+                nappi0301.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0302)) {
@@ -980,7 +989,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
 
                 piilosanaVastaus = piilosanaVastaus + nappi0302.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0302.setBackground(Color.red);
+                nappi0302.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0303)) {
@@ -991,7 +1000,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0303.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0303.setBackground(Color.red);
+                nappi0303.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0304)) {
@@ -1002,7 +1011,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0304.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0304.setBackground(Color.red);
+                nappi0304.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0305)) {
@@ -1013,7 +1022,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0305.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0305.setBackground(Color.red);
+                nappi0305.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0306)) {
@@ -1024,7 +1033,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0306.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0306.setBackground(Color.red);
+                nappi0306.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0307)) {
@@ -1035,7 +1044,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0307.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0307.setBackground(Color.red);
+                nappi0307.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0308)) {
@@ -1046,7 +1055,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0308.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0308.setBackground(Color.red);
+                nappi0308.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0309)) {
@@ -1057,7 +1066,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0309.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0309.setBackground(Color.red);
+                nappi0309.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0310)) {
@@ -1068,7 +1077,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0310.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0310.setBackground(Color.red);
+                nappi0310.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0401)) {
@@ -1079,7 +1088,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0401.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0401.setBackground(Color.red);
+                nappi0401.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0402)) {
@@ -1090,7 +1099,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0402.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0402.setBackground(Color.red);
+                nappi0402.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0403)) {
@@ -1101,7 +1110,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0403.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0403.setBackground(Color.red);
+                nappi0403.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0404)) {
@@ -1112,7 +1121,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0404.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0404.setBackground(Color.red);
+                nappi0404.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0405)) {
@@ -1123,7 +1132,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0405.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0405.setBackground(Color.red);
+                nappi0405.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0406)) {
@@ -1134,7 +1143,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0406.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0406.setBackground(Color.red);
+                nappi0406.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0407)) {
@@ -1145,7 +1154,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0407.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0407.setBackground(Color.red);
+                nappi0407.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0408)) {
@@ -1156,7 +1165,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0408.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0408.setBackground(Color.red);
+                nappi0408.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0409)) {
@@ -1167,7 +1176,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0409.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0409.setBackground(Color.red);
+                nappi0409.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0410)) {
@@ -1178,7 +1187,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0410.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0410.setBackground(Color.red);
+                nappi0410.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0501)) {
@@ -1189,7 +1198,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0501.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0501.setBackground(Color.red);
+                nappi0501.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0502)) {
@@ -1200,7 +1209,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0502.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0502.setBackground(Color.red);
+                nappi0502.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0503)) {
@@ -1211,7 +1220,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0503.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0503.setBackground(Color.red);
+                nappi0503.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0504)) {
@@ -1222,7 +1231,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0504.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0504.setBackground(Color.red);
+                nappi0504.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0505)) {
@@ -1233,7 +1242,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0505.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0505.setBackground(Color.red);
+                nappi0505.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0506)) {
@@ -1244,7 +1253,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0506.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0506.setBackground(Color.red);
+                nappi0506.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0507)) {
@@ -1255,7 +1264,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0507.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0507.setBackground(Color.red);
+                nappi0507.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0508)) {
@@ -1266,7 +1275,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0508.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0508.setBackground(Color.red);
+                nappi0508.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0509)) {
@@ -1277,7 +1286,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0509.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0509.setBackground(Color.red);
+                nappi0509.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0510)) {
@@ -1288,7 +1297,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0510.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0510.setBackground(Color.red);
+                nappi0510.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0601)) {
@@ -1299,7 +1308,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0601.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0601.setBackground(Color.red);
+                nappi0601.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0602)) {
@@ -1310,7 +1319,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0602.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0602.setBackground(Color.red);
+                nappi0602.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0603)) {
@@ -1321,7 +1330,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0603.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0603.setBackground(Color.red);
+                nappi0603.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0604)) {
@@ -1332,7 +1341,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0604.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0604.setBackground(Color.red);
+                nappi0604.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0605)) {
@@ -1343,7 +1352,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0605.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0605.setBackground(Color.red);
+                nappi0605.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0606)) {
@@ -1354,7 +1363,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0606.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0606.setBackground(Color.red);
+                nappi0606.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0607)) {
@@ -1365,7 +1374,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0607.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0607.setBackground(Color.red);
+                nappi0607.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0608)) {
@@ -1376,7 +1385,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0608.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0608.setBackground(Color.red);
+                nappi0608.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0609)) {
@@ -1387,7 +1396,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0609.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0609.setBackground(Color.red);
+                nappi0609.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0610)) {
@@ -1398,7 +1407,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0610.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0610.setBackground(Color.red);
+                nappi0610.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0701)) {
@@ -1409,7 +1418,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0701.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0701.setBackground(Color.red);
+                nappi0701.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0702)) {
@@ -1420,7 +1429,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0702.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0702.setBackground(Color.red);
+                nappi0702.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0703)) {
@@ -1431,7 +1440,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0703.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0703.setBackground(Color.red);
+                nappi0703.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0704)) {
@@ -1442,7 +1451,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0704.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0704.setBackground(Color.red);
+                nappi0704.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0705)) {
@@ -1453,7 +1462,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0705.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0705.setBackground(Color.red);
+                nappi0705.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0706)) {
@@ -1464,7 +1473,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0706.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0706.setBackground(Color.red);
+                nappi0706.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0707)) {
@@ -1475,7 +1484,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0707.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0707.setBackground(Color.red);
+                nappi0707.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0708)) {
@@ -1486,7 +1495,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0708.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0708.setBackground(Color.red);
+                nappi0708.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0709)) {
@@ -1497,7 +1506,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0709.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0709.setBackground(Color.red);
+                nappi0709.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0710)) {
@@ -1508,7 +1517,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0710.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0710.setBackground(Color.red);
+                nappi0710.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0801)) {
@@ -1519,7 +1528,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0801.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0801.setBackground(Color.red);
+                nappi0801.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0802)) {
@@ -1530,7 +1539,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0802.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0802.setBackground(Color.red);
+                nappi0802.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0803)) {
@@ -1541,7 +1550,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0803.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0803.setBackground(Color.red);
+                nappi0803.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0804)) {
@@ -1552,7 +1561,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0804.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0804.setBackground(Color.red);
+                nappi0804.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0805)) {
@@ -1563,7 +1572,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0805.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0805.setBackground(Color.red);
+                nappi0805.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0806)) {
@@ -1574,7 +1583,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0806.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0806.setBackground(Color.red);
+                nappi0806.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0807)) {
@@ -1585,7 +1594,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0807.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0807.setBackground(Color.red);
+                nappi0807.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0808)) {
@@ -1596,7 +1605,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0808.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0808.setBackground(Color.red);
+                nappi0808.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0809)) {
@@ -1607,7 +1616,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0809.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0809.setBackground(Color.red);
+                nappi0809.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0810)) {
@@ -1618,7 +1627,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0810.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0810.setBackground(Color.red);
+                nappi0810.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0901)) {
@@ -1629,7 +1638,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0901.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0901.setBackground(Color.red);
+                nappi0901.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0902)) {
@@ -1640,7 +1649,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0902.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0902.setBackground(Color.red);
+                nappi0902.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0903)) {
@@ -1651,7 +1660,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0903.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0903.setBackground(Color.red);
+                nappi0903.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0904)) {
@@ -1662,7 +1671,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0904.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0904.setBackground(Color.red);
+                nappi0904.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0905)) {
@@ -1673,7 +1682,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0905.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0905.setBackground(Color.red);
+                nappi0905.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0906)) {
@@ -1684,7 +1693,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0906.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0906.setBackground(Color.red);
+                nappi0906.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0907)) {
@@ -1695,7 +1704,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0907.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0907.setBackground(Color.red);
+                nappi0907.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0908)) {
@@ -1706,7 +1715,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0908.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0908.setBackground(Color.red);
+                nappi0908.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0909)) {
@@ -1717,7 +1726,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0909.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0909.setBackground(Color.red);
+                nappi0909.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi0910)) {
@@ -1728,7 +1737,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi0910.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi0910.setBackground(Color.red);
+                nappi0910.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi1001)) {
@@ -1739,7 +1748,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi1001.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi1001.setBackground(Color.red);
+                nappi1001.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi1002)) {
@@ -1750,7 +1759,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi1002.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi1002.setBackground(Color.red);
+                nappi1002.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi1003)) {
@@ -1761,7 +1770,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi1003.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi1003.setBackground(Color.red);
+                nappi1003.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi1004)) {
@@ -1772,7 +1781,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi1004.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi1004.setBackground(Color.red);
+                nappi1004.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi1005)) {
@@ -1783,7 +1792,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi1005.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi1005.setBackground(Color.red);
+                nappi1005.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi1006)) {
@@ -1794,7 +1803,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi1006.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi1006.setBackground(Color.red);
+                nappi1006.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi1007)) {
@@ -1805,7 +1814,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi1007.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi1007.setBackground(Color.red);
+                nappi1007.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi1008)) {
@@ -1816,7 +1825,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi1008.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi1008.setBackground(Color.red);
+                nappi1008.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi1009)) {
@@ -1827,7 +1836,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi1009.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi1009.setBackground(Color.red);
+                nappi1009.setBackground(Color.green);
             }
         }
         if (e.getSource().equals(nappi1010)) {
@@ -1838,7 +1847,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
             } else {
                 piilosanaVastaus = piilosanaVastaus + nappi1010.getText();
                 piilosanaVastausKentta.setText("Vastaus: " + piilosanaVastaus);
-                nappi1010.setBackground(Color.red);
+                nappi1010.setBackground(Color.green);
             }
         }
 
@@ -2587,8 +2596,7 @@ public class GraafinenKayttoliittyma extends javax.swing.JFrame implements Actio
         piilosanaOhje.setRows(4);
         piilosanaOhje.setText("Etsi alla oleva sana. Klikkaa sanan kirjaimia oikeassa järjestyksessä.\nSanan perättäiset kirjaimet voivat olla toisiinsa nähden missä suunnassa tahansa \n(ylhäällä, alhaalla, vieressä, kulmittain).\nVoit perua kirjaimen lisäyksen painamalla nappia uudestaan.\n");
         piilosanaOhje.setAutoscrolls(false);
-        piilosanaOhje.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        piilosanaOhje.setCaretColor(new java.awt.Color(51, 255, 51));
+        piilosanaOhje.setBorder(null);
         piilosanaOhje.setOpaque(false);
         jScrollPane2.setViewportView(piilosanaOhje);
 

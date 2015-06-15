@@ -687,12 +687,7 @@
                 <Property name="text" type="java.lang.String" value="Etsi alla oleva sana. Klikkaa sanan kirjaimia oikeassa j&#xe4;rjestyksess&#xe4;.&#xa;Sanan per&#xe4;tt&#xe4;iset kirjaimet voivat olla toisiinsa n&#xe4;hden miss&#xe4; suunnassa tahansa &#xa;(ylh&#xe4;&#xe4;ll&#xe4;, alhaalla, vieress&#xe4;, kulmittain).&#xa;Voit perua kirjaimen lis&#xe4;yksen painamalla nappia uudestaan.&#xa;"/>
                 <Property name="autoscrolls" type="boolean" value="false"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-                    <EmptyBorder/>
-                  </Border>
-                </Property>
-                <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="ff" red="33" type="rgb"/>
+                  <Border info="null"/>
                 </Property>
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>
