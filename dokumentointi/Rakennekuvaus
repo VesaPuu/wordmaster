@@ -7,4 +7,3 @@ Tekstitiedoston sanoja käsitellään ohjelmassa siis Sana-olioina, vaikka Sana-
 Myöskään Pelaaja-luokkaa ei lopullisessa toteuksessa olisi tarvittu, kun pelaajatietojen tallennusta ei tässä harjoitustyössä ehdittykään toteuttaa.
 
 Toisin kuin Anagrammi-pelillä, Piilosana- ja Laivanupotus-peleillä on ohjelmassa omat nimikkoluokkansa, jotka vastaavat noissa peleissä tarvittavan merkkitaulukon hallinnasta. Koska luokissa on paljon samoja metodeita, ne olisi voinut ehkä toteuttaa myös jonkin sopivan yliluokan aliluokkina.
-
