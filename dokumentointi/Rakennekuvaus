@@ -1,6 +1,9 @@
 Ohjelma jakautuu kahteen pakkaukseen, jotka on nimetty main ja wordmaster.
 
-Ohjelman perustana on luokka GraafinenKayttoliittyma, joka muodostaa ilmentymän Tiedostonlukijasta, joka tallentaa lukemansa tekstitiedoston rivi kerrallaan Sana-olioina Sanasto-luokan sisältämään ArrayListiin. Käyttöliittymässä oikeastaan tapahtuu jonkin verran sellaistakin tiedonkäsittelyä, joka ei oikeastaan kuuluisi käyttöliittymän tehtäviin. Näitä ovat esimerkiksi Anagrammi-peliin liittyvät pari metodia.
+Ohjelman perustana on luokka GraafinenKayttoliittyma, joka muodostaa ilmentymän Tiedostonlukijasta, joka tallentaa lukemansa
+tekstitiedoston rivi kerrallaan Sana-olioina Sanasto-luokan sisältämään ArrayListiin. Käyttöliittymässä oikeastaan tapahtuu
+jonkin verran sellaistakin tiedonkäsittelyä, joka ei oikeastaan kuuluisi käyttöliittymän tehtäviin. Näitä ovat esimerkiksi
+Anagrammi-peliin liittyvät pari metodia.
 
 Tekstitiedoston sanoja käsitellään ohjelmassa siis Sana-olioina, vaikka Sana-luokan tarpeellisuuden voi kyseenalaistaakin. Ilman Sana-olioitakin ohjelman olisi voinut toteuttaa käsittelemällä tekstitiedoston rivejä pelkästään String-luokan välinein.
 
