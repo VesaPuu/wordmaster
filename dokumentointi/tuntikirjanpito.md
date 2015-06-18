@@ -101,4 +101,13 @@
 
 - sekvenssikaaviot eri pelit aloittavista metodeista
 - luokkakaavio päivitetty
-- Javadoc-kuvauksia täydennetty- 
+- Javadoc-kuvauksia täydennetty
+
+15.6. 3 h
+
+- Pelaajatietojen käsittelyn kokeilua (ei toteuteta)
+
+18.6. 7 h
+
+- käyytöliittymän muokkausta (Laivanupotus- ja Piilosana-pelien nappien generointi ja siihen liittyvät muutokset)
+- lopullisen palautuksen valmistelu
