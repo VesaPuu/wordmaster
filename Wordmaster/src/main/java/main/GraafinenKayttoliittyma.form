@@ -23,12 +23,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="ylaPaneeli" max="32767" attributes="0"/>
-          <Component id="anagrammiPaneeli" max="32767" attributes="0"/>
-          <Component id="piilosanaPaneeli" max="32767" attributes="0"/>
           <Component id="lopetaPaneeli" max="32767" attributes="0"/>
           <Component id="laivanupotusPaneeli" max="32767" attributes="0"/>
           <Component id="valitsePaneeli" alignment="0" max="32767" attributes="0"/>
+          <Component id="ylaPaneeli" alignment="0" max="32767" attributes="0"/>
+          <Component id="anagrammiPaneeli" max="32767" attributes="0"/>
+          <Component id="piilosanaPaneeli" alignment="0" pref="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -37,15 +37,15 @@
               <Component id="ylaPaneeli" min="-2" pref="72" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="valitsePaneeli" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="anagrammiPaneeli" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="piilosanaPaneeli" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="laivanupotusPaneeli" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lopetaPaneeli" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <Component id="lopetaPaneeli" min="-2" pref="37" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -284,226 +284,42 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="118" pref="118" max="-2" attributes="0"/>
+                  <Component id="piilosanaOtsikko" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="571" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="118" pref="118" max="-2" attributes="0"/>
-                          <Component id="piilosanaOtsikko" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="piilosanaUudelleenNappi" min="-2" pref="163" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="etsittava" min="-2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" min="-2" pref="489" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="nappi0101" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0102" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0103" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0104" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0105" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0106" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0107" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="nappi0201" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0202" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0203" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0204" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0205" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0206" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0207" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="nappi0301" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0302" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0303" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0304" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0305" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0306" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0307" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="nappi0401" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0402" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0403" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0404" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0405" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0406" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0407" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="nappi0501" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0502" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0503" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0504" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0505" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0506" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0507" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="nappi0601" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0602" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0603" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0604" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0605" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0606" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0607" min="-2" pref="39" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="nappi0701" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0702" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0703" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0704" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0705" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0706" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0707" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="nappi0801" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0802" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0803" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0804" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0805" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0806" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0807" min="-2" max="-2" attributes="0"/>
+                                          <Component id="etsittava" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
-                                          <Component id="nappi1001" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi1002" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi1003" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi1004" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi1005" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi1006" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi1007" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="nappi0901" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0902" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0903" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0904" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0905" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0906" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="nappi0907" min="-2" max="-2" attributes="0"/>
+                                          <Component id="piilosanaVastausKentta" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="nappi0108" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0208" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0308" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0408" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0508" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0608" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0708" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0808" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0908" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi1008" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="nappi0109" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0209" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0309" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0409" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0509" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0609" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0709" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0809" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0909" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi1009" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="nappi0110" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0210" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0310" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0410" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0510" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0610" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0710" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0810" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi0910" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="nappi1010" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="piilosanaVastaaNappi" min="-2" pref="130" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="piilosanaVastausKentta" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="piilosanaVastaaNappi" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="piilosanaUudelleenNappi" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="piilosanaNapitPaneeli" min="-2" pref="463" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="-2" pref="456" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="22" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jScrollPane2" min="-2" pref="598" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -514,145 +330,20 @@
                   <Component id="piilosanaOtsikko" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane2" min="-2" pref="98" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="etsittava" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nappi0101" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0102" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0103" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0104" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0105" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0106" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0107" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0108" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0109" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0110" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="etsittava" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="piilosanaVastausKentta" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="piilosanaVastaaNappi" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nappi0201" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0202" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0203" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0204" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0205" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0206" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0207" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0208" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0209" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0210" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="piilosanaNapitPaneeli" pref="34" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nappi0301" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0302" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0303" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0304" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0305" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0306" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0307" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0308" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0309" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0310" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="piilosanaUudelleenNappi" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nappi0401" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0402" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0403" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0404" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0405" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0406" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0407" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0408" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0409" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0410" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nappi0501" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0502" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0503" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0504" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0505" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0506" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0507" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0508" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0509" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0510" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nappi0601" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0602" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0603" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0604" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0605" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0606" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0607" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0608" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0609" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0610" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nappi0701" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0702" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0703" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0704" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0705" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0706" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0707" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0708" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0709" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0710" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nappi0801" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0802" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0803" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0804" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0805" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0806" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0807" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0808" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0809" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0810" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nappi0901" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0902" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0903" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0904" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0905" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0906" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0907" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0908" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0909" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi0910" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nappi1001" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi1002" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi1003" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi1004" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi1005" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi1006" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi1007" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi1008" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi1009" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="nappi1010" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="piilosanaVastausKentta" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="piilosanaVastaaNappi" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="piilosanaUudelleenNappi" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -694,1206 +385,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="nappi0101">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="1"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0101ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0102">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0102ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0103">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0103ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0104">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="4"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0104ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0105">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0105ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0106">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="6"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0106ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0107">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="7"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0107ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0108">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="8"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0108ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0109">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="9"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0109ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0110">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="10"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0110ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0201">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="1"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0201ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0202">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0202ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0203">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0203ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0204">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="4"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0204ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0205">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0205ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0206">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="6"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0206ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0207">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="7"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0207ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0208">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="8"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0208ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0209">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="9"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0209ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0210">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="10"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0210ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0301">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="1"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0301ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0302">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0302ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0303">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0303ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0304">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="4"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0304ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0305">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0305ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0306">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="6"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0306ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0307">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="7"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0307ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0308">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="8"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0308ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0309">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="9"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0309ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0310">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="10"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0310ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0401">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="1"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0401ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0402">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0402ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0403">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0403ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0404">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="4"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0404ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0405">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0405ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0406">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="6"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0406ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0407">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="7"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0407ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0408">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="8"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0408ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0409">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="9"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0409ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0410">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="10"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0410ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0501">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="1"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0501ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0502">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0502ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0503">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0503ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0504">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="4"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0504ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0505">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0505ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0506">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="6"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0506ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0507">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="7"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0507ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0508">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="8"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0508ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0509">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="9"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0509ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0510">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="10"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0510ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0601">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="1"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0601ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0602">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0602ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0603">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0603ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0604">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="4"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0604ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0605">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0605ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0606">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="6"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0606ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0607">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="7"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0607ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0608">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="8"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0608ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0609">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="9"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0609ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0610">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="10"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0610ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0701">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="1"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0701ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0702">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0702ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0703">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0703ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0704">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="4"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0704ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0705">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0705ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0706">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="6"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0706ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0707">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="7"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0707ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0708">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="8"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0708ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0709">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="9"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0709ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0710">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="10"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0710ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0801">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="1"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0801ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0802">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0802ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0803">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0803ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0804">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="4"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0804ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0805">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0805ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0806">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="6"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0806ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0807">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="7"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0807ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0808">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="8"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0808ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0809">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="9"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0809ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0810">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="10"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0810ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0901">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="1"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0901ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0902">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0902ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0903">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0903ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0904">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="4"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0904ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0905">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0905ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0906">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="6"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0906ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0907">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="7"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0907ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0908">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="8"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0908ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0909">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="9"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0909ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi0910">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="10"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi0910ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi1001">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="1"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi1001ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi1002">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi1002ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi1003">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="3"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi1003ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi1004">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="4"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi1004ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi1005">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi1005ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi1006">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="6"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi1006ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi1007">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="7"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi1007ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi1008">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="8"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi1008ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi1009">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="9"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi1009ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="nappi1010">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="13" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="10"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nappi1010ActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="piilosanaVastausKentta">
           <Properties>
             <Property name="text" type="java.lang.String" value="Vastaus: "/>
@@ -1907,6 +398,22 @@
             <Property name="text" type="java.lang.String" value="etsittava"/>
           </Properties>
         </Component>
+        <Container class="javax.swing.JPanel" name="piilosanaNapitPaneeli">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+            <Property name="columns" type="int" value="10"/>
+            <Property name="horizontalGap" type="int" value="1"/>
+            <Property name="rows" type="int" value="10"/>
+            <Property name="verticalGap" type="int" value="1"/>
+          </Layout>
+        </Container>
         <Component class="javax.swing.JButton" name="piilosanaVastaaNappi">
           <Properties>
             <Property name="text" type="java.lang.String" value="Vastaa"/>
@@ -1914,7 +421,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="piilosanaUudelleenNappi">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Uudestaan"/>
+            <Property name="text" type="java.lang.String" value="Uudelleen"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="piilosanaUudelleenNappiActionPerformed"/>
@@ -1941,65 +448,28 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="laivanupotusOtsikko" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" max="32767" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="laivanupotusNappi1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi11" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi16" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi21" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="laivanupotusUudelleen" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="laivanupotusNapitPaneeli" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="upotettavaKentta" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="klikkaukset" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="laivanupotusNappi2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi12" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi17" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi22" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="laivanupotusNappi3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi13" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi18" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi23" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="laivanupotusNappi4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi9" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi14" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi19" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi24" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="laivanupotusNappi5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi10" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi15" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi20" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusNappi25" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="upotettavaKentta" min="-2" max="-2" attributes="0"/>
-                              <Component id="klikkaukset" min="-2" max="-2" attributes="0"/>
-                              <Component id="osumat" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusUudelleen" min="-2" max="-2" attributes="0"/>
-                              <Component id="laivanupotusPisteetKentta" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="laivanupotusOtsikko" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="365" pref="365" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="osumat" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="346" max="32767" attributes="0"/>
               </Group>
+              <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -2007,53 +477,17 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="laivanupotusOtsikko" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="86" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="laivanupotusNappi1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="upotettavaKentta" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="laivanupotusNappi6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi10" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="klikkaukset" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="laivanupotusNappi11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi13" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi14" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi15" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="osumat" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="laivanupotusNappi16" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi17" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi18" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi19" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi20" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusPisteetKentta" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="laivanupotusNapitPaneeli" min="-2" pref="121" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="laivanupotusNappi21" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi22" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi23" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi24" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusNappi25" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="laivanupotusUudelleen" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <Component id="laivanupotusUudelleen" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2087,206 +521,6 @@
             <Property name="text" type="java.lang.String" value="Laivanupotus"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi3ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi4ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi5ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi6ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi7">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi7ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi8">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi8ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi9ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi10">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi10ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi11">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi11ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi12">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi12ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi13">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi13ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi14">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi14ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi15">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi15ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi16">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi16ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi17">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi17ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi18">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi18ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi19">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi19ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi20">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi20ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi21">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi21ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi22">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi22ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi23">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi23ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi24">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi24ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="laivanupotusNappi25">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="laivanupotusNappi25ActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="upotettavaKentta">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2310,11 +544,22 @@
             <Property name="text" type="java.lang.String" value="Uudelleen"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="laivanupotusPisteetKentta">
+        <Container class="javax.swing.JPanel" name="laivanupotusNapitPaneeli">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Pisteet:"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </Property>
           </Properties>
-        </Component>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+            <Property name="columns" type="int" value="5"/>
+            <Property name="horizontalGap" type="int" value="1"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="verticalGap" type="int" value="1"/>
+          </Layout>
+        </Container>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="lopetaPaneeli">

@@ -20,20 +20,11 @@ public class Sanasto {
     static Random random;
 
     /**
-     * ArrayListin sanat osajoukko, joka koostuu satunnaisesti valituista
-     * Sana-olioista
-     */
-    public static ArrayList otos;
-
-    /**
      * Parametritön konstruktori
      */
     public Sanasto() {
-
         Sanasto.sanat = new ArrayList<>();
         Sanasto.random = new Random();
-        Sanasto.otos = new ArrayList<>();
-
     }
 
     /**
@@ -43,26 +34,7 @@ public class Sanasto {
      * @return palauttaa arvon "true", jos lisäys onnistuu
      */
     public boolean lisaaSana(Sana sana) {
-
         Sanasto.sanat.add(sana);
-
-        return true;
-    }
-
-    /**
-     * Luo sanalistasta halutun kokoisen otoksen satunnaisia Sana-olioita, joka
-     * tallennetaan ArrayListiin otos
-     *
-     * @param kpl otoksen koko
-     * @return palauttaa arvon "true", jos tulostus onnistuu
-     */
-    public boolean luoOtos(int kpl) {
-        ArrayList kopio = sanat;
-        for (int i = 0; i < kpl; i++) {
-            int r = random.nextInt(kopio.size());
-            otos.add(kopio.get(r));
-            kopio.remove(r);
-        }
         return true;
     }
 
@@ -72,9 +44,9 @@ public class Sanasto {
      * @return satunnainen Sana-olio
      */
     public Sana luoRandomSana() {
-        Sana rsana;
+        Sana randomsana;
         int r = random.nextInt(sanat.size());
-        rsana = (Sana) sanat.get(r);
-        return rsana;
+        randomsana = (Sana) sanat.get(r);
+        return randomsana;
     }
 }

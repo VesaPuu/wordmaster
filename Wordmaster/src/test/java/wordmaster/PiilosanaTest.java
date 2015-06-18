@@ -50,19 +50,18 @@ public class PiilosanaTest {
         assertTrue(i == -1 || i == 0 || i == 1);
     }
 
-    @Test
-    public void testOnkoTyhja() {
-        Piilosana p = new Piilosana();
-        assertEquals(true, p.onkoTyhja(0, 0));
-    }
-
-    @Test
-    public void testOnkoTyhjaEpaonnistuu() {
-        Piilosana p = new Piilosana();
-        p.lisaaMerkki(0, 0, 'a');
-        assertEquals(false, p.onkoTyhja(0, 0));
-    }
-
+//    @Test
+//    public void testOnkoTyhja() {
+//        Piilosana p = new Piilosana();
+//        assertEquals(true, p.onkoTyhja(0, 0));
+//    }
+//
+//    @Test
+//    public void testOnkoTyhjaEpaonnistuu() {
+//        Piilosana p = new Piilosana();
+//        p.lisaaMerkki(0, 0, 'a');
+//        assertEquals(false, p.onkoTyhja(0, 0));
+//    }
     @Test
     public void testTyhjennaKaikki() {
         Piilosana p = new Piilosana();

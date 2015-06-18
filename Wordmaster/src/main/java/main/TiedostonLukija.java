@@ -41,12 +41,6 @@ public class TiedostonLukija {
                 Sana sana = new Sana(str);
 
                 sanasto.lisaaSana(sana);
-
-//Tiedostokirjoitin kirjoitin = new Tiedostokirjoitin();
-//                TiedostonLukija.avaa("teksti.txt");
-//                TiedostonLukija.kirjoita(str);
-//
-//                TiedostonLukija.sulje();
             }
 
             in.close();
@@ -61,37 +55,3 @@ public class TiedostonLukija {
         return true;
     }
 }
-
-//    public static boolean avaa(String tiedostonimi) {
-//        /* Avaa tekstitiedoston tiedostonimi kirjoittamista
-//         varten. Palauttaa arvon false jos syntyy poikkeus.*/
-//        try {
-//            kirjoitettavaTiedosto = new PrintWriter(new FileOutputStream(tiedostonimi), true);
-//        } catch (Exception poikkeus) {
-//            return false;
-//        }
-//        return true;
-//    }
-//    public static boolean kirjoita(String kirjoitettavaMerkkijono) {
-//        /* Kirjoittaa merkkijonon. Palauttaa arvon false
-//         jos syntyy poikkeus.*/
-//        try {
-//            kirjoitettavaTiedosto.println(kirjoitettavaMerkkijono);
-//        } catch (Exception poikkeus) {
-//            return false;
-//        }
-//        return true;
-//    }
-//    public static boolean sulje() {
-//        /* Sulkee tiedoston. Palauttaa poikkeuksen sattuessa
-//         falsen.*/
-//        try {
-//            kirjoitettavaTiedosto.close();
-//        } catch (Exception poikkeus) {
-//            return false;
-//        }
-//        return true;
-//
-//    }
-//}
-

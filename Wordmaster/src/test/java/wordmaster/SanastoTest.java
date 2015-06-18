@@ -31,16 +31,4 @@ public class SanastoTest {
         assertTrue(sana.getSana().equals("HIHITYS") || sana.getSana().equals("HOHOTUS") || sana.getSana().equals("HEKOTUS"));
     }
 
-    @Test
-    public void testLuoOtos() {
-        Sanasto s = new Sanasto();
-        s.lisaaSana(new Sana("hohotus"));
-        s.lisaaSana(new Sana("hihitys"));
-        s.lisaaSana(new Sana("hekotus"));
-        s.lisaaSana(new Sana("yksi"));
-        s.lisaaSana(new Sana("kaksi"));
-        s.lisaaSana(new Sana("kolme"));
-        assertEquals(true, s.luoOtos(3));
-    }
-
 }
