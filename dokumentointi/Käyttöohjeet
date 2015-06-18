@@ -1,0 +1,9 @@
+Käyttöohjeet
+
+Kun ohjelma käynnistyy, se kysyy käyttäjän nimeä. Kyselyn voi halutessaan ohittaa painamalla Enteriä. 
+
+Seuraavaksi käyttäjä voi valita kolmesta pelivaihtoehtoehdosta: Anagrammi, Piilosana ja Laivanupotus.
+
+Kun pelaaja on valinnut jonkin pelivaihtoehdon, hän voi siirtyä mihin tahansa muuhun peliin tai lopettaa.
+
+Pelaajan tietoja tai hänen pisteitään ei tallenneta mihinkään.
