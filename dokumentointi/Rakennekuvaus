@@ -5,8 +5,12 @@ tekstitiedoston rivi kerrallaan Sana-olioina Sanasto-luokan sisältämään Arra
 jonkin verran sellaistakin tiedonkäsittelyä, joka ei oikeastaan kuuluisi käyttöliittymän tehtäviin. Näitä ovat esimerkiksi
 Anagrammi-peliin liittyvät pari metodia.
 
-Tekstitiedoston sanoja käsitellään ohjelmassa siis Sana-olioina, vaikka Sana-luokan tarpeellisuuden voi kyseenalaistaakin. Ilman Sana-olioitakin ohjelman olisi voinut toteuttaa käsittelemällä tekstitiedoston rivejä pelkästään String-luokan välinein.
+Tekstitiedoston sanoja käsitellään ohjelmassa siis Sana-olioina, vaikka Sana-luokan tarpeellisuuden voi kyseenalaistaakin.
+Ilman Sana-olioitakin ohjelman olisi voinut toteuttaa käsittelemällä tekstitiedoston rivejä pelkästään String-luokan välinein.
 
-Myöskään Pelaaja-luokkaa ei lopullisessa toteuksessa olisi tarvittu, kun pelaajatietojen tallennusta ei tässä harjoitustyössä ehdittykään toteuttaa.
+Myöskään Pelaaja-luokkaa ei lopullisessa toteuksessa olisi tarvittu, kun pelaajatietojen tallennusta ei tässä harjoitustyössä
+ehdittykään toteuttaa.
 
-Toisin kuin Anagrammi-pelillä, Piilosana- ja Laivanupotus-peleillä on ohjelmassa omat nimikkoluokkansa, jotka vastaavat noissa peleissä tarvittavan merkkitaulukon hallinnasta. Koska luokissa on paljon samoja metodeita, ne olisi voinut ehkä toteuttaa myös jonkin sopivan yliluokan aliluokkina.
+Toisin kuin Anagrammi-pelillä, Piilosana- ja Laivanupotus-peleillä on ohjelmassa omat nimikkoluokkansa, jotka vastaavat noissa
+peleissä tarvittavan merkkitaulukon hallinnasta. Koska luokissa on paljon samoja metodeita, ne olisi voinut ehkä toteuttaa
+myös jonkin sopivan yliluokan aliluokkina.
